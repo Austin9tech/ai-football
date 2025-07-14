@@ -1,0 +1,208 @@
+{
+  "lastUpdated": "2023-11-15",
+  "performanceMetrics": {
+    "accuracyRate": "87.3%",
+    "avgROI": "24.7%",
+    "matchesAnalyzed": "5,328",
+    "userSatisfaction": "96.5%"
+  },
+  "todayPredictions": [
+    {
+      "match": "CHELSEA vs ARSENAL",
+      "league": "PREMIER LEAGUE",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 78,
+      "analysis": "Chelsea averaging 3.2 goals at home this season. Arsenal's away defense concedes 1.8 goals per match. Last 5 H2H meetings produced 3.4 goals on average.",
+      "stats": [
+        { "label": "Chelsea Home xG", "value": "2.1" },
+        { "label": "Arsenal Away xGA", "value": "1.6" },
+        { "label": "H2H Over 2.5", "value": "4/5" },
+        { "label": "AI Success Rate", "value": "82%" }
+      ]
+    },
+    {
+      "match": "NAPOLI vs ROMA",
+      "league": "SERIE A",
+      "prediction": "Both Teams To Score",
+      "confidence": 71,
+      "analysis": "BTTS occurred in 7 of last 8 meetings. Napoli score in 89% of home games. Roma score in 83% of away games. Both teams have attacking lineups.",
+      "stats": [
+        { "label": "Napoli Home BTTS", "value": "67%" },
+        { "label": "Roma Away BTTS", "value": "72%" },
+        { "label": "H2H BTTS", "value": "7/8" },
+        { "label": "AI Success Rate", "value": "76%" }
+      ]
+    },
+    {
+      "match": "BAYERN MUNICH vs DORTMUND",
+      "league": "BUNDESLIGA",
+      "prediction": "Home Win & Over 2.5",
+      "confidence": 82,
+      "analysis": "Bayern have won 9 of last 10 home games against Dortmund. Average goals in last 5 meetings is 4.0. Bayern in strong home form with 3.1 goals per game.",
+      "stats": [
+        { "label": "Bayern Home Win %", "value": "85%" },
+        { "label": "Dortmund Away Loss %", "value": "35%" },
+        { "label": "H2H Over 2.5", "value": "9/10" },
+        { "label": "AI Success Rate", "value": "88%" }
+      ]
+    },
+    {
+      "match": "PSG vs MONACO",
+      "league": "LIGUE 1",
+      "prediction": "Both Teams To Score",
+      "confidence": 68,
+      "analysis": "BTTS in 6 of last 7 meetings. Monaco score in 80% of away games. PSG defense has been shaky with key players missing.",
+      "stats": [
+        { "label": "PSG Home BTTS", "value": "60%" },
+        { "label": "Monaco Away BTTS", "value": "75%" },
+        { "label": "H2H BTTS", "value": "6/7" },
+        { "label": "AI Success Rate", "value": "72%" }
+      ]
+    },
+    {
+      "match": "ATLETICO MADRID vs REAL MADRID",
+      "league": "LA LIGA",
+      "prediction": "Under 2.5 Goals",
+      "confidence": 65,
+      "analysis": "Last 5 derbies averaged 1.8 goals. Both teams likely to play cautiously. Atletico strong defensive record at home.",
+      "stats": [
+        { "label": "Atletico Home U2.5", "value": "70%" },
+        { "label": "Real Away U2.5", "value": "55%" },
+        { "label": "H2H Under 2.5", "value": "4/5" },
+        { "label": "AI Success Rate", "value": "69%" }
+      ]
+    },
+    {
+      "match": "MANCHESTER UNITED vs NEWCASTLE",
+      "league": "PREMIER LEAGUE",
+      "prediction": "Draw",
+      "confidence": 58,
+      "analysis": "Last 3 meetings ended in draws. Both teams inconsistent this season. Similar xG metrics in recent matches.",
+      "stats": [
+        { "label": "Man Utd Home Draw %", "value": "30%" },
+        { "label": "Newcastle Away Draw %", "value": "35%" },
+        { "label": "H2H Draws", "value": "3/5" },
+        { "label": "AI Success Rate", "value": "63%" }
+      ]
+    },
+    {
+      "match": "LEVERKUSEN vs LEIPZIG",
+      "league": "BUNDESLIGA",
+      "prediction": "Home Win or Draw",
+      "confidence": 72,
+      "analysis": "Leverkusen unbeaten at home this season. Leipzig struggling away against top teams. Leverkusen have won 3 of last 5 home meetings.",
+      "stats": [
+        { "label": "Leverkusen Home Win %", "value": "75%" },
+        { "label": "Leipzig Away Loss %", "value": "40%" },
+        { "label": "H2H Home/Draw", "value": "4/5" },
+        { "label": "AI Success Rate", "value": "78%" }
+      ]
+    },
+    {
+      "match": "AC MILAN vs FIORENTINA",
+      "league": "SERIE A",
+      "prediction": "Home Win",
+      "confidence": 67,
+      "analysis": "Milan strong at home against mid-table teams. Fiorentina poor away record against top 6. Milan won last 3 home meetings.",
+      "stats": [
+        { "label": "Milan Home Win %", "value": "70%" },
+        { "label": "Fiorentina Away Loss %", "value": "45%" },
+        { "label": "H2H Home Wins", "value": "3/5" },
+        { "label": "AI Success Rate", "value": "73%" }
+      ]
+    }
+  ],
+  "tomorrowPredictions": [
+    {
+      "match": "MAN CITY vs LIVERPOOL",
+      "league": "PREMIER LEAGUE",
+      "prediction": "Over 3.5 Goals",
+      "confidence": 74,
+      "analysis": "Last 5 meetings averaged 4.2 goals. Both teams in top form offensively. Defensive vulnerabilities on both sides. High probability of open game.",
+      "stats": [
+        { "label": "City Home xG", "value": "2.8" },
+        { "label": "Liverpool Away xG", "value": "2.3" },
+        { "label": "H2H Over 3.5", "value": "4/5" },
+        { "label": "AI Success Rate", "value": "79%" }
+      ]
+    },
+    {
+      "match": "INTER MILAN vs JUVENTUS",
+      "league": "SERIE A",
+      "prediction": "Under 2.5 Goals",
+      "confidence": 72,
+      "analysis": "Defensive battle expected. Last 4 meetings had 1.5 goals average. Both teams missing key attackers.",
+      "stats": [
+        { "label": "Inter Home U2.5", "value": "65%" },
+        { "label": "Juventus Away U2.5", "value": "70%" },
+        { "label": "H2H Under 2.5", "value": "3/4" },
+        { "label": "AI Success Rate", "value": "75%" }
+      ]
+    },
+    {
+      "match": "BARCELONA vs SEVILLA",
+      "league": "LA LIGA",
+      "prediction": "Home Win -1.5",
+      "confidence": 69,
+      "analysis": "Barcelona strong at home against Sevilla (won last 5 by 2+ goals). Sevilla struggling defensively with injuries.",
+      "stats": [
+        { "label": "Barca Home Win %", "value": "80%" },
+        { "label": "Sevilla Away Loss %", "value": "45%" },
+        { "label": "H2H -1.5", "value": "5/5" },
+        { "label": "AI Success Rate", "value": "73%" }
+      ]
+    },
+    {
+      "match": "LYON vs MARSEILLE",
+      "league": "LIGUE 1",
+      "prediction": "Both Teams To Score",
+      "confidence": 75,
+      "analysis": "BTTS in last 8 meetings. Both teams need points. Marseille score in 85% of away games. Lyon improving offensively.",
+      "stats": [
+        { "label": "Lyon Home BTTS", "value": "65%" },
+        { "label": "Marseille Away BTTS", "value": "80%" },
+        { "label": "H2H BTTS", "value": "8/8" },
+        { "label": "AI Success Rate", "value": "81%" }
+      ]
+    },
+    {
+      "match": "TOTTENHAM vs ASTON VILLA",
+      "league": "PREMIER LEAGUE",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 77,
+      "analysis": "Both teams playing attacking football. Last 5 meetings averaged 3.6 goals. Tottenham home xG of 2.4, Villa away xG of 1.9.",
+      "stats": [
+        { "label": "Spurs Home Over 2.5", "value": "75%" },
+        { "label": "Villa Away Over 2.5", "value": "70%" },
+        { "label": "H2H Over 2.5", "value": "4/5" },
+        { "label": "AI Success Rate", "value": "83%" }
+      ]
+    },
+    {
+      "match": "DORTMUND vs WOLFSBURG",
+      "league": "BUNDESLIGA",
+      "prediction": "Home Win & BTTS",
+      "confidence": 68,
+      "analysis": "Dortmund strong at home against Wolfsburg (won 7 of last 8). Wolfsburg score in 75% of away games. Dortmund defense vulnerable.",
+      "stats": [
+        { "label": "Dortmund Home Win %", "value": "75%" },
+        { "label": "Wolfsburg Away BTTS", "value": "70%" },
+        { "label": "H2H Home Win & BTTS", "value": "5/8" },
+        { "label": "AI Success Rate", "value": "74%" }
+      ]
+    },
+    {
+      "match": "LAZIO vs ATALANTA",
+      "league": "SERIE A",
+      "prediction": "Draw or Away Win",
+      "confidence": 63,
+      "analysis": "Atalanta unbeaten in last 5 against Lazio. Lazio struggling for consistency. Atalanta better xG metrics in recent matches.",
+      "stats": [
+        { "label": "Lazio Home Draw/Loss", "value": "40%" },
+        { "label": "Atalanta Away Win %", "value": "50%" },
+        { "label": "H2H Draw/Away Win", "value": "5/5" },
+        { "label": "AI Success Rate", "value": "69%" }
+      ]
+    }
+  ]
+}

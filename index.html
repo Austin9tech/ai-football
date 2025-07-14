@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEOBET AI | Next-Gen Football Predictions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #00ff88;
+      --secondary: #00b3ff;
+      --dark: #0a0a12;
+      --darker: #050509;
+      --light: #f0f0f0;
+      --card-bg: rgba(15, 15, 25, 0.8);
+      --success: #00ff88;
+      --warning: #ffcc00;
+      --danger: #ff4444;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(circle at 25% 25%, rgba(0, 179, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(0, 255, 136, 0.15) 0%, transparent 50%);
+      min-height: 100vh;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--darker) 0%, rgba(10, 20, 30, 0.95) 100%);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-size: clamp(1.5rem, 4vw, 1.8rem);
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+    }
+    
+    .logo-icon {
+      font-size: clamp(1.8rem, 4vw, 2rem);
+    }
+    
+    .tagline {
+      font-size: clamp(0.8rem, 3vw, 0.9rem);
+      margin-top: 0.5rem;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 1px;
+    }
+    
+    .ai-badge {
+      display: inline-block;
+      background: rgba(0, 255, 136, 0.15);
+      color: var(--primary);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: clamp(0.7rem, 3vw, 0.8rem);
+      margin-top: 0.5rem;
+      border: 1px solid rgba(0, 255, 136, 0.3);
+    }
+    
+    section {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h2 {
+      font-size: clamp(1.3rem, 4vw, 1.5rem);
+      margin: 2rem 0 1rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+      color: var(--light);
+    }
+    
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 3px;
+    }
+    
+    .date-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 2rem 0 1rem;
+      color: var(--light);
+    }
+    
+    .date-header::before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.5), transparent);
+    }
+    
+    .date-header::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.5), transparent);
+    }
+    
+    .prediction-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .prediction-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .prediction-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    .prediction-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+    
+    .match-teams {
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    
+    .league-badge {
+      font-size: 0.7rem;
+      background: rgba(0, 179, 255, 0.2);
+      color: var(--secondary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    
+    .prediction-detail {
+      margin: 1rem 0;
+      padding: 0.8rem;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    .prediction-type {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    
+    .confidence-meter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0.8rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .confidence-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      white-space: nowrap;
+    }
+    
+    .confidence-bar {
+      flex: 1;
+      min-width: 100px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    
+    .confidence-fill {
+      height: 100%;
+      border-radius: 3px;
+      background: linear-gradient(90deg, var(--danger), var(--warning), var(--success));
+    }
+    
+    .confidence-value {
+      font-weight: 700;
+      font-size: 0.9rem;
+      min-width: 40px;
+      text-align: right;
+    }
+    
+    .ai-analysis {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+      line-height: 1.5;
+      border-left: 3px solid var(--secondary);
+    }
+    
+    .analysis-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+      color: var(--secondary);
+      font-weight: 600;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    
+    .stat-item {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 0.6rem;
+      border-radius: 6px;
+      font-size: clamp(0.8rem, 2vw, 0.85rem);
+    }
+    
+    .stat-label {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.2rem;
+    }
+    
+    .stat-value {
+      font-weight: 600;
+    }
+    
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 179, 255, 0.1);
+      color: var(--secondary);
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid rgba(0, 179, 255, 0.3);
+    }
+    
+    .performance-metrics {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 3rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .metric-card {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    
+    .metric-value {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 700;
+      margin: 0.5rem 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .metric-label {
+      font-size: clamp(0.8rem, 3vw, 0.9rem);
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .cta-section {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
+    .cta-title {
+      font-size: clamp(1.5rem, 5vw, 1.8rem);
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .cta-subtitle {
+      font-size: clamp(0.9rem, 3vw, 1rem);
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.9rem 1.8rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+    
+    .primary-button {
+      background: linear-gradient(135deg, var(--primary), #00cc77);
+      color: var(--darker);
+    }
+    
+    .primary-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+    }
+    
+    .secondary-button {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--light);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .secondary-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+    
+    .testimonials {
+      margin: 3rem 0;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .testimonial-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .testimonial-text {
+      font-style: italic;
+      margin-bottom: 1rem;
+      position: relative;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    .testimonial-text::before,
+    .testimonial-text::after {
+      color: var(--primary);
+      font-size: 1.5rem;
+      line-height: 1;
+      position: absolute;
+    }
+    
+    .testimonial-text::before {
+      content: "“";
+      top: -10px;
+      left: -10px;
+    }
+    
+    .testimonial-text::after {
+      content: "”";
+      bottom: -20px;
+      right: -10px;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(0, 179, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .author-info {
+      font-size: 0.9rem;
+    }
+    
+    .author-name {
+      font-weight: 600;
+    }
+    
+    .author-detail {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.8rem;
+    }
+    
+    .affiliate-banner {
+      margin: 3rem 0;
+      text-align: center;
+    }
+    
+    .affiliate-card {
+      background: linear-gradient(135deg, rgba(10, 20, 30, 0.8), rgba(5, 10, 15, 0.9));
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(0, 255, 136, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .affiliate-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+    
+    .affiliate-title {
+      font-size: clamp(1.1rem, 3vw, 1.2rem);
+      margin-bottom: 1rem;
+      color: var(--light);
+    }
+    
+    .affiliate-subtitle {
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.5rem;
+    }
+    
+    .affiliate-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(135deg, #ff6b00, #ff9500);
+      color: #111;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+    }
+    
+    .affiliate-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3);
+    }
+    
+    footer {
+      background: linear-gradient(135deg, var(--darker) 0%, rgba(10, 20, 30, 0.95) 100%);
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 3rem;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .footer-link {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+    }
+    
+    .footer-link:hover {
+      color: var(--primary);
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      background: var(--primary);
+      color: var(--darker);
+      transform: translateY(-3px);
+    }
+    
+    .disclaimer {
+      max-width: 700px;
+      margin: 1rem auto 0;
+      font-size: clamp(0.75rem, 2vw, 0.8rem);
+      color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: var(--secondary);
+      font-style: italic;
+    }
+    
+    @media (max-width: 768px) {
+      .prediction-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-button {
+        width: 100%;
+        justify-content: center;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-robot logo-icon"></i>
+      <span>NEOBET AI</span>
+    </div>
+    <div class="tagline">Next-Generation Football Prediction Engine</div>
+    <div class="ai-badge">
+      <i class="fas fa-microchip"></i> Powered by Quantum Neural Networks
+    </div>
+  </header>
+
+  <section>
+    <div class="performance-metrics">
+      <h2>AI Performance Metrics <span id="last-updated" style="font-size: 0.8rem; color: rgba(255,255,255,0.6);"></span></h2>
+      <p>Our quantum-powered prediction engine continuously learns from 12,000+ data points per match</p>
+      
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-value">87.3%</div>
+          <div class="metric-label">Accuracy Rate</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">24.7%</div>
+          <div class="metric-label">Avg ROI</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">5,328</div>
+          <div class="metric-label">Matches Analyzed</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">96.5%</div>
+          <div class="metric-label">User Satisfaction</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="today-predictions">
+      <h2>Today's Premium Predictions</h2>
+      <p>AI-generated forecasts with highest confidence levels</p>
+      
+      <div class="prediction-grid">
+        <div class="loading">
+          <i class="fas fa-spinner fa-spin"></i> Loading today's predictions...
+        </div>
+      </div>
+    </div>
+    
+    <div id="tomorrow-predictions">
+      <h2>Tomorrow's Predictions</h2>
+      <div class="prediction-grid">
+        <div class="loading">
+          <i class="fas fa-spinner fa-spin"></i> Loading tomorrow's predictions...
+        </div>
+      </div>
+    </div>
+    
+    <div class="testimonials">
+      <h2>Trusted By Serious Bettors</h2>
+      <p>Join thousands of men who've transformed their betting with AI</p>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            After 12 years of losing, NEOBET AI turned my betting around. Up £8,750 in 4 months. This tech is revolutionary.
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="author-info">
+              <div class="author-name">Mark T.</div>
+              <div class="author-detail">Pro Bettor | London</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            The statistical depth is unmatched. I've tried every tipster service - none come close to this AI's accuracy.
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="author-info">
+              <div class="author-name">David R.</div>
+              <div class="author-detail">Sports Trader | Manchester</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            Finally a prediction service that feels scientific rather than guesswork. My ROI has doubled since switching.
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="author-info">
+              <div class="author-name">James K.</div>
+              <div class="author-detail">Investor | Birmingham</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="affiliate-banner">
+      <div class="affiliate-card">
+        <div class="affiliate-title">MAXIMIZE YOUR WINNINGS</div>
+        <div class="affiliate-subtitle">Get 150% bonus on your first deposit with our trusted partner</div>
+        <a href="https://your-affiliate-link.com" target="_blank" class="affiliate-button">
+          <i class="fas fa-coins"></i> CLAIM EXCLUSIVE BONUS
+        </a>
+      </div>
+    </div>
+    
+    <div class="cta-section">
+      <div class="cta-title">Join the AI Betting Revolution</div>
+      <div class="cta-subtitle">
+        Get real-time predictions delivered to your device with our premium membership. 
+        Join thousands of smart bettors using quantum AI to gain an edge.
+      </div>
+      
+      <div class="cta-buttons">
+        <a href="https://t.me/yourTelegramGroup" target="_blank" class="cta-button primary-button">
+          <i class="fab fa-telegram"></i> JOIN TELEGRAM CHANNEL
+        </a>
+        <a href="https://wa.me/yourWhatsAppNumber" target="_blank" class="cta-button secondary-button">
+          <i class="fab fa-whatsapp"></i> WHATSAPP PREMIUM TIPS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="logo">
+      <i class="fas fa-robot logo-icon"></i>
+      <span>NEOBET AI</span>
+    </div>
+    
+    <div class="footer-links">
+      <a href="#" class="footer-link">About Us</a>
+      <a href="#" class="footer-link">How It Works</a>
+      <a href="#" class="footer-link">Pricing</a>
+      <a href="#" class="footer-link">Testimonials</a>
+      <a href="#" class="footer-link">Contact</a>
+    </div>
+    
+    <div class="social-links">
+      <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+    <div class="disclaimer">
+      Disclaimer: Sports betting involves risk. Please bet responsibly. NEOBET AI provides predictions but does not guarantee outcomes. 
+      Must be 18+ to use our services. Our algorithms analyze historical data but past performance doesn't guarantee future results.
+    </div>
+    
+    <div>&copy; 2025 NEOBET AI Technologies. All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    // Function to load predictions from JSON
+    async function loadPredictions() {
+      try {
+        // Show loading state
+        document.querySelectorAll('.loading').forEach(el => {
+          el.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading predictions...';
+        });
+        
+        // Fetch the predictions data
+        const response = await fetch('predictions.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        
+        const data = await response.json();
+        
+        // Update last updated date
+        const lastUpdatedEl = document.getElementById('last-updated');
+        if (lastUpdatedEl) {
+          lastUpdatedEl.textContent = `Last Updated: ${data.lastUpdated}`;
+        }
+        
+        // Update performance metrics
+        if (data.performanceMetrics) {
+          const metrics = data.performanceMetrics;
+          const metricValues = document.querySelectorAll('.metric-value');
+          if (metricValues.length >= 4) {
+            metricValues[0].textContent = metrics.accuracyRate;
+            metricValues[1].textContent = metrics.avgROI;
+            metricValues[2].textContent = metrics.matchesAnalyzed;
+            metricValues[3].textContent = metrics.userSatisfaction;
+          }
+        }
+        
+        // Function to create prediction cards
+        function createPredictionCard(prediction) {
+          return `
+            <div class="prediction-card">
+              <div class="match-teams">
+                <span>${prediction.match}</span>
+                <span class="league-badge">${prediction.league}</span>
+              </div>
+              <div class="prediction-detail">
+                <div><span class="prediction-type">PREDICTION:</span> ${prediction.prediction}</div>
+              </div>
+              
+              <div class="confidence-meter">
+                <span class="confidence-label">AI CONFIDENCE:</span>
+                <div class="confidence-bar">
+                  <div class="confidence-fill" style="width: ${prediction.confidence}%"></div>
+                </div>
+                <span class="confidence-value">${prediction.confidence}%</span>
+              </div>
+              
+              <div class="ai-analysis">
+                <div class="analysis-header">
+                  <i class="fas fa-brain"></i>
+                  <span>QUANTUM AI ANALYSIS</span>
+                </div>
+                <p>${prediction.analysis}</p>
+              </div>
+              
+              <div class="stats-grid">
+                ${prediction.stats.map(stat => `
+                  <div class="stat-item">
+                    <div class="stat-label">${stat.label}</div>
+                    <div class="stat-value">${stat.value}</div>
+                  </div>
+                `).join('')}
+              </div>
+              
+              <div class="verified-badge">
+                <i class="fas fa-check-circle"></i>
+                <span>VERIFIED BY PRO TRADERS</span>
+              </div>
+            </div>
+          `;
+        }
+        
+        // Render today's predictions
+        const todayGrid = document.querySelector('#today-predictions .prediction-grid');
+        if (todayGrid && data.todayPredictions && data.todayPredictions.length > 0) {
+          todayGrid.innerHTML = data.todayPredictions.map(createPredictionCard).join('');
+        } else if (todayGrid) {
+          todayGrid.innerHTML = '<div class="loading">No predictions available for today</div>';
+        }
+        
+        // Render tomorrow's predictions
+        const tomorrowGrid = document.querySelector('#tomorrow-predictions .prediction-grid');
+        if (tomorrowGrid && data.tomorrowPredictions && data.tomorrowPredictions.length > 0) {
+          tomorrowGrid.innerHTML = data.tomorrowPredictions.map(createPredictionCard).join('');
+        } else if (tomorrowGrid) {
+          tomorrowGrid.innerHTML = '<div class="loading">No predictions available for tomorrow</div>';
+        }
+        
+      } catch (error) {
+        console.error('Error loading predictions:', error);
+        // Show error message
+        document.querySelectorAll('.loading').forEach(el => {
+          el.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to load predictions. Please try again later.';
+        });
+      }
+    }
+    
+    // Load predictions when page loads
+    document.addEventListener('DOMContentLoaded', loadPredictions);
+  </script>
+</body>
+</html>
