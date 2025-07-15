@@ -1,350 +1,64 @@
 {
-  "lastUpdated": "2025-07-14",
+  "lastUpdated": "2025-07-15",
   "performanceMetrics": {
-    "accuracyRate": "87.5%",
-    "avgROI": "24.9%",
-    "matchesAnalyzed": "6,820",
-    "userSatisfaction": "96.3%"
+    "accuracyRate": "88.3%",
+    "avgROI": "25.6%",
+    "matchesAnalyzed": "7,124",
+    "userSatisfaction": "97.2%"
   },
   "todayPredictions": [
     {
-      "match": "IK SIRIUS vs MJÄLLBY AIF",
-      "league": "Swedish Allsvenskan",
-      "prediction": "Draw or Away Win",
-      "confidence": 62,
-      "analysis": "Sirius struggle at home lately; Mjällby unbeaten in last 3 away with solid counters.",
-      "stats": [
-        { "label": "Sirius Home Win %", "value": "28%" },
-        { "label": "Mjällby Away Win/Draw %", "value": "55%" },
-        { "label": "Last 5 H2H Draw/Away", "value": "3/5" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    },
-    {
-      "match": "RFS vs LEVADIA",
+      "match": "FC KAIRAT ALMATY vs OLIMPIJA LJUBLJANA",
       "league": "UEFA Champions League Qual.",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 65,
-      "analysis": "Tense qualifying match. Both sides cautious with low-scoring trend.",
+      "prediction": "Home Win",
+      "confidence": 71,
+      "analysis": "Kairat is dominant at home in European qualifiers. Olimpija has struggled in away fixtures recently, especially against aggressive pressing teams.",
       "stats": [
-        { "label": "RFS Home U2.5", "value": "68%" },
-        { "label": "Levadia Away U2.5", "value": "70%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "HAMRUN SPARTANS vs ZALGIRIS",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Both Teams To Score",
-      "confidence": 68,
-      "analysis": "Both sides average over 1.5 goals scored per game in domestic leagues.",
-      "stats": [
-        { "label": "Hamrun BTTS %", "value": "65%" },
-        { "label": "Zalgiris BTTS %", "value": "68%" },
+        { "label": "Kairat Home Win %", "value": "78%" },
+        { "label": "Olimpija Away Loss %", "value": "58%" },
+        { "label": "H2H Home Wins", "value": "2/2" },
         { "label": "AI Success Rate", "value": "74%" }
       ]
     },
     {
       "match": "LINCOLN RED IMPS vs VIKINGUR GOTA",
       "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win",
-      "confidence": 70,
-      "analysis": "Lincoln strong at home in previous UCL qualifying rounds.",
-      "stats": [
-        { "label": "Lincoln Home Win %", "value": "72%" },
-        { "label": "Vikingur Away Loss %", "value": "58%" },
-        { "label": "AI Success Rate", "value": "75%" }
-      ]
-    },
-    {
-      "match": "KUPION PALLO vs MILSAMI",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 66,
-      "analysis": "Both teams attack-oriented; defenses vulnerable in open matches.",
-      "stats": [
-        { "label": "KuPS Home Over 2.5", "value": "67%" },
-        { "label": "Milsami Away Over 2.5", "value": "65%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "MALMO vs IBERIA",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win -1.5",
-      "confidence": 72,
-      "analysis": "Malmo heavy favorites with much stronger squad depth.",
-      "stats": [
-        { "label": "Malmo Home Win %", "value": "80%" },
-        { "label": "AI Success Rate", "value": "77%" }
-      ]
-    },
-    {
-      "match": "BUDUCNOST vs NOAH",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Draw",
-      "confidence": 58,
-      "analysis": "Evenly matched tie with low-scoring history.",
-      "stats": [
-        { "label": "Buducnost Home Draw %", "value": "30%" },
-        { "label": "Noah Away Draw %", "value": "35%" },
-        { "label": "AI Success Rate", "value": "65%" }
-      ]
-    },
-    {
-      "match": "DIFFERDANGE vs DRITA",
-      "league": "UEFA Champions League Qual.",
       "prediction": "Under 2.5 Goals",
-      "confidence": 64,
-      "analysis": "Knockout match with conservative approach expected.",
-      "stats": [
-        { "label": "Differdange U2.5", "value": "68%" },
-        { "label": "Drita U2.5", "value": "70%" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    },
-    {
-      "match": "INTER CLUB vs STEAUA",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Away Win",
-      "confidence": 73,
-      "analysis": "Steaua have far superior European experience.",
-      "stats": [
-        { "label": "Steaua Away Win %", "value": "72%" },
-        { "label": "AI Success Rate", "value": "78%" }
-      ]
-    },
-    {
-      "match": "Zrinjski vs Virtus",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win",
-      "confidence": 74,
-      "analysis": "Zrinjski dominant in Bosnian league, home advantage huge.",
-      "stats": [
-        { "label": "Zrinjski Home Win %", "value": "77%" },
-        { "label": "AI Success Rate", "value": "80%" }
-      ]
-    },
-    {
-      "match": "CUIABA vs AMAZONAS",
-      "league": "Brazilian Serie B",
-      "prediction": "Home Win",
-      "confidence": 69,
-      "analysis": "Cuiaba solid home record, Amazonas struggling away.",
-      "stats": [
-        { "label": "Cuiaba Home Win %", "value": "70%" },
-        { "label": "Amazonas Away Loss %", "value": "55%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "VEIKKAUSLIIGA FRIENDLY",
-      "league": "Veikkausliiga",
-      "prediction": "Both Teams To Score",
-      "confidence": 65,
-      "analysis": "Finnish teams play openly in friendlies with experimental defenses.",
-      "stats": [
-        { "label": "BTTS Rate", "value": "68%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "NORWEGIAN CUP FRIENDLY",
-      "league": "Eliteserien",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 67,
-      "analysis": "Norwegian Cup matches often high scoring with rotated defenses.",
-      "stats": [
-        { "label": "Cup Over 2.5", "value": "70%" },
-        { "label": "AI Success Rate", "value": "73%" }
-      ]
-    },
-    {
-      "match": "MLS EXHIBITION",
-      "league": "MLS Friendly",
-      "prediction": "Home Win or Draw",
       "confidence": 66,
-      "analysis": "Home team advantage in travel-heavy MLS pre-season.",
+      "analysis": "Both teams tend to play defensively in qualifiers. Lincoln has not scored more than 1 goal in last 4 home UEFA matches. Vikingur focus on compact play.",
       "stats": [
-        { "label": "Home Win/Draw %", "value": "68%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "COPA AMERICA FEMENINA URUGUAY vs ARGENTINA",
-      "league": "Copa América Femenina",
-      "prediction": "Argentina Win",
-      "confidence": 72,
-      "analysis": "Argentina stronger squad, Uruguay defensive but limited.",
-      "stats": [
-        { "label": "Argentina Group Win %", "value": "80%" },
-        { "label": "AI Success Rate", "value": "75%" }
+        { "label": "Lincoln Home U2.5", "value": "71%" },
+        { "label": "Vikingur Away U2.5", "value": "67%" },
+        { "label": "H2H Under 2.5", "value": "2/2" },
+        { "label": "AI Success Rate", "value": "70%" }
       ]
     }
   ],
-    "tomorrowPredictions": [
+  "tomorrowPredictions": [
     {
-      "match": "CENTRAL CÓRDOBA vs CERRO LARGO",
-      "league": "Copa Sudamericana Playoffs",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 64,
-      "analysis": "South American knockout ties often open; Cerro Largo attack effective on away legs.",
+      "match": "FC DINAMO MINSK vs LUDOGORETS",
+      "league": "UEFA Champions League Qual.",
+      "prediction": "Both Teams To Score",
+      "confidence": 69,
+      "analysis": "Both clubs have strong attacking potential. Ludogorets has scored in each of their last 10 European away games. Dinamo Minsk have found form recently with 8 goals in 3 matches.",
       "stats": [
-        { "label": "Central Córdoba Home Over 2.5 %", "value": "62%" },
-        { "label": "Cerro Largo Away Over 2.5 %", "value": "65%" },
-        { "label": "AI Success Rate", "value": "69%" }
+        { "label": "Dinamo Minsk BTTS", "value": "65%" },
+        { "label": "Ludogorets BTTS", "value": "70%" },
+        { "label": "H2H BTTS", "value": "2/2" },
+        { "label": "AI Success Rate", "value": "75%" }
       ]
     },
     {
-      "match": "BAHÍA vs AMÉRICA DE CALI",
-      "league": "Copa Sudamericana Playoffs",
+      "match": "LINFIELD FC vs SHELBOURNE FC",
+      "league": "UEFA Champions League Qual.",
       "prediction": "Draw",
-      "confidence": 60,
-      "analysis": "First leg evenly matched; América de Cali disciplined away.",
+      "confidence": 61,
+      "analysis": "A very tight fixture between two evenly matched clubs. Previous head-to-head ended in a stalemate. Both teams with cautious first-leg approaches.",
       "stats": [
-        { "label": "Bahía Home Draw %", "value": "30%" },
-        { "label": "América Away Draw %", "value": "35%" },
-        { "label": "AI Success Rate", "value": "68%" }
-      ]
-    },
-    {
-      "match": "INDEPENDIENTE DEL VALLE vs VASCO DA GAMA",
-      "league": "Copa Sudamericana Playoffs",
-      "prediction": "Home Win",
-      "confidence": 66,
-      "analysis": "Independiente strong at home in international ties; Vasco inconsistent away.",
-      "stats": [
-        { "label": "Independiente Home Win %", "value": "68%" },
-        { "label": "Vasco Away Loss %", "value": "48%" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    },
-    {
-      "match": "KÍ KL vs CELJE",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 65,
-      "analysis": "Expected tight defensive clash in second leg qualifying.",
-      "stats": [
-        { "label": "KÍ Home U2.5", "value": "68%" },
-        { "label": "Celje Away U2.5", "value": "71%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "KAIRAT ALMATY vs OLIMPIJA LJUBLJANA",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win",
-      "confidence": 68,
-      "analysis": "Kairat generally strong at home in European competition.",
-      "stats": [
-        { "label": "Kairat Home Win %", "value": "70%" },
-        { "label": "AI Success Rate", "value": "73%" }
-      ]
-    },
-    {
-      "match": "THE NEW SAINTS vs LARNE",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win or Draw",
-      "confidence": 67,
-      "analysis": "Welsh champions favored but Larne are stubborn opponents.",
-      "stats": [
-        { "label": "TNS Home Win %", "value": "72%" },
-        { "label": "Larne Away Loss %", "value": "45%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "MIDTJYLLAND vs HB TÓRSHAVN",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win -1.5",
-      "confidence": 74,
-      "analysis": "Danish side overwhelming favorite, superior quality.",
-      "stats": [
-        { "label": "Midtjylland Home Win %", "value": "80%" },
-        { "label": "AI Success Rate", "value": "78%" }
-      ]
-    },
-    {
-      "match": "HJK HELSINKI vs LUDOGORETS",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Both Teams To Score",
-      "confidence": 69,
-      "analysis": "High-scoring trend in first leg, both strong domestically.",
-      "stats": [
-        { "label": "HJK BTTS %", "value": "65%" },
-        { "label": "Ludogorets BTTS %", "value": "68%" },
-        { "label": "AI Success Rate", "value": "74%" }
-      ]
-    },
-    {
-      "match": "DUNDALK vs CLIFTONVILLE",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 63,
-      "analysis": "Irish clubs usually see cagey ties in qualifiers.",
-      "stats": [
-        { "label": "Dundalk U2.5", "value": "66%" },
-        { "label": "Cliftonville U2.5", "value": "68%" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    },
-    {
-      "match": "FERENCVÁROS vs FC SHERIFF",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win",
-      "confidence": 71,
-      "analysis": "Ferencváros experienced in qualifiers, strong home form.",
-      "stats": [
-        { "label": "Ferencváros Home Win %", "value": "75%" },
-        { "label": "AI Success Rate", "value": "76%" }
-      ]
-    },
-    {
-      "match": "SCOTTISH LEAGUE CUP - ST MIRREN vs AYR UNITED",
-      "league": "Scottish League Cup",
-      "prediction": "Home Win",
-      "confidence": 69,
-      "analysis": "St Mirren usually strong at home, Ayr have struggled away.",
-      "stats": [
-        { "label": "St Mirren Home Win %", "value": "68%" },
-        { "label": "Ayr Away Loss %", "value": "55%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "SCOTTISH LEAGUE CUP - PARTICK THISTLE vs DUNDEE UNITED",
-      "league": "Scottish League Cup",
-      "prediction": "Both Teams To Score",
-      "confidence": 66,
-      "analysis": "Cup ties often open with rotated lineups.",
-      "stats": [
-        { "label": "Partick BTTS %", "value": "65%" },
-        { "label": "Dundee United BTTS %", "value": "68%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "SCOTTISH LEAGUE CUP - RAITH ROVERS vs ARBROATH",
-      "league": "Scottish League Cup",
-      "prediction": "Home Win",
-      "confidence": 67,
-      "analysis": "Raith good record at home, Arbroath form mixed.",
-      "stats": [
-        { "label": "Raith Home Win %", "value": "68%" },
-        { "label": "Arbroath Away Loss %", "value": "55%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "COPA AMERICA FEMENINA - COLOMBIA vs CHILE",
-      "league": "Copa América Femenina",
-      "prediction": "Home Win",
-      "confidence": 71,
-      "analysis": "Colombia with solid squad advantage, Chile rebuilding.",
-      "stats": [
-        { "label": "Colombia Group Win %", "value": "75%" },
-        { "label": "AI Success Rate", "value": "74%" }
+        { "label": "Linfield Draw Rate", "value": "38%" },
+        { "label": "Shelbourne Draw Rate", "value": "41%" },
+        { "label": "H2H Draws", "value": "1/1" },
+        { "label": "AI Success Rate", "value": "66%" }
       ]
     }
   ]
