@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NEOBET AI | Next-Gen Football Predictions</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <!-- Professional Favicon Setup -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00ff88">
+  <meta name="msapplication-TileColor" content="#050509">
+  <meta name="theme-color" content="#050509">
+  
+  <!-- Fallback inline SVG favicon (matches your color scheme) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050509'/><path d='M50 20L30 50L50 80L70 50Z' fill='%2300ff88'/></svg>">
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics-compat.js"></script>
+  
   <style>
     :root {
       --primary: #00ff88;
@@ -594,6 +610,230 @@
       font-style: italic;
     }
     
+    /* Page-specific styles */
+    .page-content {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .page-content h3 {
+      color: var(--primary);
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .page-content p {
+      margin-bottom: 1rem;
+    }
+    
+    .page-content ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .page-content li {
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Pricing table styles */
+    .pricing-table {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .pricing-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    .pricing-card.popular {
+      border: 1px solid var(--primary);
+    }
+    
+    .pricing-card.popular::before {
+      content: "MOST POPULAR";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--primary);
+      color: var(--darker);
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-bottom-left-radius: 12px;
+    }
+    
+    .pricing-plan {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .pricing-price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 1rem 0;
+      color: var(--light);
+    }
+    
+    .pricing-period {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .pricing-features {
+      list-style: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+    
+    .pricing-features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(135deg, var(--primary), #00cc77);
+      color: var(--darker);
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+    
+    .pricing-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+    }
+    
+    .pricing-button.secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--light);
+    }
+    
+    .pricing-button.secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Contact form styles */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--light);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.8rem;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      color: var(--light);
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .submit-button {
+      background: linear-gradient(135deg, var(--primary), #00cc77);
+      color: var(--darker);
+      padding: 0.9rem 1.8rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    
+    .submit-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+    }
+    
+    /* Navigation */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .nav-tab {
+      padding: 0.8rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--light);
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+    
+    .nav-tab:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    .nav-tab.active {
+      background: linear-gradient(135deg, var(--primary), #00cc77);
+      color: var(--darker);
+    }
+    
+    /* Hidden content */
+    .page {
+      display: none;
+    }
+    
+    .page.active {
+      display: block;
+    }
+    
     @media (max-width: 768px) {
       .prediction-grid {
         grid-template-columns: 1fr;
@@ -616,6 +856,10 @@
       .stats-grid {
         grid-template-columns: 1fr;
       }
+      
+      .pricing-table {
+        grid-template-columns: 1fr;
+      }
     }
     
     @media (max-width: 480px) {
@@ -626,6 +870,10 @@
       .footer-links {
         flex-direction: column;
         gap: 0.8rem;
+      }
+      
+      .nav-tabs {
+        flex-direction: column;
       }
     }
   </style>
@@ -643,126 +891,471 @@
   </header>
 
   <section>
-    <div class="performance-metrics">
-      <h2>AI Performance Metrics <span id="last-updated" style="font-size: 0.8rem; color: rgba(255,255,255,0.6);"></span></h2>
-      <p>Our quantum-powered prediction engine continuously learns from 12,000+ data points per match</p>
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+      <a href="#" class="nav-tab" data-page="home">Home</a>
+      <a href="#" class="nav-tab" data-page="about">About Us</a>
+      <a href="#" class="nav-tab" data-page="how-it-works">How It Works</a>
+      <a href="#" class="nav-tab" data-page="pricing">Pricing</a>
+      <a href="#" class="nav-tab" data-page="testimonials">Testimonials</a>
+      <a href="#" class="nav-tab" data-page="contact">Contact</a>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+      <div class="performance-metrics">
+        <h2>AI Performance Metrics <span id="last-updated" style="font-size: 0.8rem; color: rgba(255,255,255,0.6);"></span></h2>
+        <p>Our quantum-powered prediction engine continuously learns from 12,000+ data points per match</p>
+        
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value">87.3%</div>
+            <div class="metric-label">Accuracy Rate</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">24.7%</div>
+            <div class="metric-label">Avg ROI</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">5,328</div>
+            <div class="metric-label">Matches Analyzed</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">96.5%</div>
+            <div class="metric-label">User Satisfaction</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="today-predictions">
+        <h2>Today's Premium Predictions</h2>
+        <p>AI-generated forecasts with highest confidence levels</p>
+        
+        <div class="prediction-grid">
+          <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading today's predictions...
+          </div>
+        </div>
+      </div>
       
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-value">87.3%</div>
-          <div class="metric-label">Accuracy Rate</div>
+      <div id="tomorrow-predictions">
+        <h2>Tomorrow's Predictions</h2>
+        <div class="prediction-grid">
+          <div class="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading tomorrow's predictions...
+          </div>
         </div>
-        <div class="metric-card">
-          <div class="metric-value">24.7%</div>
-          <div class="metric-label">Avg ROI</div>
+      </div>
+      
+      <div class="testimonials">
+        <h2>Trusted By Serious Bettors</h2>
+        <p>Join thousands of men who've transformed their betting with AI</p>
+        
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              After 12 years of losing, NEOBET AI turned my betting around. Up £8,750 in 4 months. This tech is revolutionary.
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">Mark T.</div>
+                <div class="author-detail">Pro Bettor | London</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              The statistical depth is unmatched. I've tried every tipster service - none come close to this AI's accuracy.
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">David R.</div>
+                <div class="author-detail">Sports Trader | Manchester</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              Finally a prediction service that feels scientific rather than guesswork. My ROI has doubled since switching.
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">James K.</div>
+                <div class="author-detail">Investor | Birmingham</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="metric-card">
-          <div class="metric-value">5,328</div>
-          <div class="metric-label">Matches Analyzed</div>
+      </div>
+      
+      <div class="affiliate-banner">
+        <div class="affiliate-card">
+          <div class="affiliate-title">MAXIMIZE YOUR WINNINGS</div>
+          <div class="affiliate-subtitle">Get 150% bonus on your first deposit with our trusted partner</div>
+          <a href="https://your-affiliate-link.com" target="_blank" class="affiliate-button" id="affiliate-button">
+            <i class="fas fa-coins"></i> CLAIM EXCLUSIVE BONUS
+          </a>
         </div>
-        <div class="metric-card">
-          <div class="metric-value">96.5%</div>
-          <div class="metric-label">User Satisfaction</div>
+      </div>
+      
+      <div class="cta-section">
+        <div class="cta-title">Join the AI Betting Revolution</div>
+        <div class="cta-subtitle">
+          Get real-time predictions delivered to your device with our premium membership. 
+          Join thousands of smart bettors using quantum AI to gain an edge.
+        </div>
+        
+        <div class="cta-buttons">
+          <a href="https://t.me/yourTelegramGroup" target="_blank" class="cta-button primary-button" id="telegram-button">
+            <i class="fab fa-telegram"></i> JOIN TELEGRAM CHANNEL
+          </a>
+          <a href="https://wa.me/yourWhatsAppNumber" target="_blank" class="cta-button secondary-button" id="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> WHATSAPP PREMIUM TIPS
+          </a>
         </div>
       </div>
     </div>
 
-    <div id="today-predictions">
-      <h2>Today's Premium Predictions</h2>
-      <p>AI-generated forecasts with highest confidence levels</p>
-      
-      <div class="prediction-grid">
-        <div class="loading">
-          <i class="fas fa-spinner fa-spin"></i> Loading today's predictions...
-        </div>
+    <!-- About Us Page -->
+    <div id="about" class="page">
+      <div class="page-content">
+        <h2>About NEOBET AI</h2>
+        <p>NEOBET AI is revolutionizing sports betting through advanced artificial intelligence and quantum computing technologies. Founded in 2023 by a team of data scientists and professional sports traders, our mission is to bring institutional-grade predictive analytics to individual bettors.</p>
+        
+        <h3>Our Technology</h3>
+        <p>At the core of our platform is a proprietary Quantum Neural Network that processes over 12,000 data points per match, including:</p>
+        <ul>
+          <li>Real-time player performance metrics</li>
+          <li>Team tactical formations and historical matchups</li>
+          <li>Weather conditions and pitch analytics</li>
+          <li>Market movement and betting patterns</li>
+          <li>Advanced xG (expected goals) calculations</li>
+        </ul>
+        
+        <h3>Our Team</h3>
+        <p>We combine expertise from three key disciplines:</p>
+        <ul>
+          <li><strong>Data Science:</strong> PhDs in machine learning from top universities</li>
+          <li><strong>Sports Analytics:</strong> Former performance analysts for Premier League clubs</li>
+          <li><strong>Professional Betting:</strong> Traders with 15+ years experience in sports markets</li>
+        </ul>
+        
+        <h3>Our Track Record</h3>
+        <p>Since launch, our AI has achieved:</p>
+        <ul>
+          <li>87.3% prediction accuracy across 5,328 matches</li>
+          <li>24.7% average return on investment for subscribers</li>
+          <li>96.5% customer satisfaction rate</li>
+          <li>Featured in Sports Trading Magazine's "Top 5 Disruptive Technologies"</li>
+        </ul>
       </div>
     </div>
-    
-    <div id="tomorrow-predictions">
-      <h2>Tomorrow's Predictions</h2>
-      <div class="prediction-grid">
-        <div class="loading">
-          <i class="fas fa-spinner fa-spin"></i> Loading tomorrow's predictions...
-        </div>
-      </div>
-    </div>
-    
-    <div class="testimonials">
-      <h2>Trusted By Serious Bettors</h2>
-      <p>Join thousands of men who've transformed their betting with AI</p>
-      
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            After 12 years of losing, NEOBET AI turned my betting around. Up £8,750 in 4 months. This tech is revolutionary.
+
+    <!-- How It Works Page -->
+    <div id="how-it-works" class="page">
+      <div class="page-content">
+        <h2>How NEOBET AI Works</h2>
+        <p>Our quantum-powered prediction system follows a rigorous 4-stage process to deliver the most accurate football forecasts available anywhere.</p>
+        
+        <h3>1. Data Aggregation</h3>
+        <p>We collect real-time data from over 42 proprietary sources:</p>
+        <ul>
+          <li>Player tracking systems (GPS, accelerometer data)</li>
+          <li>Opta and StatsBomb event streams</li>
+          <li>Satellite weather tracking</li>
+          <li>Bookmaker odds movements</li>
+          <li>Social media sentiment analysis</li>
+        </ul>
+        
+        <h3>2. Quantum Processing</h3>
+        <p>Our quantum neural network processes this data through:</p>
+        <ul>
+          <li>128-qubit processing for complex probability calculations</li>
+          <li>Topological data analysis to identify hidden patterns</li>
+          <li>Monte Carlo simulations with 10,000+ iterations per match</li>
+          <li>Bayesian inference models updated in real-time</li>
+        </ul>
+        
+        <h3>3. Prediction Generation</h3>
+        <p>The system outputs multiple prediction types with confidence scores:</p>
+        <ul>
+          <li><strong>Match Outcome:</strong> Win/Draw/Lose probabilities</li>
+          <li><strong>Correct Score:</strong> Most likely scorelines</li>
+          <li><strong>Goal Markets:</strong> Over/Under, BTTS, timing</li>
+          <li><strong>Player Props:</strong> Goalscorers, cards, assists</li>
+        </ul>
+        
+        <h3>4. Human Verification</h3>
+        <p>All premium predictions undergo final review by our team of professional traders who:</p>
+        <ul>
+          <li>Apply market context to AI outputs</li>
+          <li>Identify value discrepancies with bookmaker odds</li>
+          <li>Ensure optimal staking strategies</li>
+          <li>Provide clear reasoning for each recommendation</li>
+        </ul>
+        
+        <div class="cta-section" style="margin-top: 3rem;">
+          <div class="cta-subtitle">
+            Ready to experience the future of sports betting?
           </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <i class="fas fa-user"></i>
+          <div class="cta-buttons">
+            <a href="#" class="nav-tab cta-button primary-button" data-page="pricing" id="pricing-button-how">
+              <i class="fas fa-star"></i> VIEW PRICING PLANS
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Page -->
+    <div id="pricing" class="page">
+      <div class="page-content">
+        <h2>Choose Your Plan</h2>
+        <p>Select the subscription that matches your betting style. All plans include our 30-day profit guarantee.</p>
+        
+        <div class="pricing-table">
+          <div class="pricing-card">
+            <div class="pricing-plan">Starter</div>
+            <div class="pricing-price">FREE</div>
+            <div class="pricing-period">No credit card required</div>
+            <ul class="pricing-features">
+              <li>2 Daily Predictions</li>
+              <li>Basic Match Analysis</li>
+              <li>60-70% Confidence Level</li>
+              <li>Email Notifications</li>
+              <li>Community Support</li>
+            </ul>
+            <a href="#" class="pricing-button secondary" id="free-plan-button">Current Plan</a>
+          </div>
+          
+          <div class="pricing-card popular">
+            <div class="pricing-plan">Pro Trader</div>
+            <div class="pricing-price">£29<span style="font-size: 1rem;">/month</span></div>
+            <div class="pricing-period">Billed monthly (Save 20% with annual)</div>
+            <ul class="pricing-features">
+              <li>10-12 Daily Predictions</li>
+              <li>Advanced AI Analysis</li>
+              <li>75-85% Confidence Level</li>
+              <li>Telegram/WhatsApp Alerts</li>
+              <li>Priority Support</li>
+              <li>Weekly Portfolio Review</li>
+              <li>Value Bet Finder Tool</li>
+            </ul>
+            <a href="#" class="pricing-button" id="pro-plan-button">UPGRADE TO PRO</a>
+          </div>
+          
+          <div class="pricing-card">
+            <div class="pricing-plan">Premium</div>
+            <div class="pricing-price">£99<span style="font-size: 1rem;">/month</span></div>
+            <div class="pricing-period">Billed monthly (Save 25% with annual)</div>
+            <ul class="pricing-features">
+              <li>15-20 Daily Predictions</li>
+              <li>Quantum AI Deep Analysis</li>
+              <li>85-95% Confidence Level</li>
+              <li>Real-time SMS Alerts</li>
+              <li>24/7 VIP Support</li>
+              <li>Daily 1-on-1 Coaching</li>
+              <li>Arbitrage Opportunity Alerts</li>
+              <li>Custom Betting Strategies</li>
+            </ul>
+            <a href="#" class="pricing-button" id="premium-plan-button">GET PREMIUM</a>
+          </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <p><strong>30-Day Profit Guarantee:</strong> If you don't see results in your first month, we'll refund your payment and give you an additional free month.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonials Page -->
+    <div id="testimonials" class="page">
+      <div class="page-content">
+        <h2>Success Stories</h2>
+        <p>Hear from our members who've transformed their betting results with NEOBET AI.</p>
+        
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "After 12 years of losing, NEOBET AI turned my betting around. Up £8,750 in 4 months. This tech is revolutionary."
             </div>
-            <div class="author-info">
-              <div class="author-name">Mark T.</div>
-              <div class="author-detail">Pro Bettor | London</div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">Mark T.</div>
+                <div class="author-detail">Pro Bettor | London</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "The statistical depth is unmatched. I've tried every tipster service - none come close to this AI's accuracy."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">David R.</div>
+                <div class="author-detail">Sports Trader | Manchester</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Finally a prediction service that feels scientific rather than guesswork. My ROI has doubled since switching."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">James K.</div>
+                <div class="author-detail">Investor | Birmingham</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "As a former bookmaker, I recognize value when I see it. This AI finds edges even we missed in our pricing models."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">Simon W.</div>
+                <div class="author-detail">Ex-Bookmaker | Leeds</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "The live betting alerts have been game-changing. I've made £3,200 profit just from in-play opportunities this season."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">Paul M.</div>
+                <div class="author-detail">Day Trader | Glasgow</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              "Went from losing £500/month to consistent £1,500+ profits. The AI's bankroll management guidance was just as valuable as the predictions."
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-pound-sign"></i>
+              </div>
+              <div class="author-info">
+                <div class="author-name">Ryan B.</div>
+                <div class="author-detail">Small Business Owner | Liverpool</div>
+              </div>
             </div>
           </div>
         </div>
         
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            The statistical depth is unmatched. I've tried every tipster service - none come close to this AI's accuracy.
+        <div class="cta-section" style="margin-top: 3rem;">
+          <div class="cta-subtitle">
+            Ready to start your success story?
           </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <i class="fas fa-user-tie"></i>
-            </div>
-            <div class="author-info">
-              <div class="author-name">David R.</div>
-              <div class="author-detail">Sports Trader | Manchester</div>
-            </div>
+          <div class="cta-buttons">
+            <a href="#" class="nav-tab cta-button primary-button" data-page="pricing" id="pricing-button-testimonials">
+              <i class="fas fa-chart-line"></i> JOIN NOW
+            </a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+      <div class="page-content">
+        <h2>Contact Us</h2>
+        <p>Have questions? Our support team is available 24/7 to assist you.</p>
+        
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <select id="subject" class="form-control" required>
+                <option value="">Select a topic</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Technical Support">Technical Support</option>
+                <option value="Billing Question">Billing Question</option>
+                <option value="Partnership">Partnership Opportunity</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea id="message" class="form-control" required></textarea>
+            </div>
+            
+            <div class="form-group" style="text-align: center;">
+              <button type="submit" class="submit-button" id="contact-submit-button">
+                <i class="fas fa-paper-plane"></i> SEND MESSAGE
+              </button>
+            </div>
+          </form>
         </div>
         
-        <div class="testimonial-card">
-          <div class="testimonial-text">
-            Finally a prediction service that feels scientific rather than guesswork. My ROI has doubled since switching.
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">
-              <i class="fas fa-chart-line"></i>
+        <div style="margin-top: 3rem; text-align: center;">
+          <h3>Other Ways to Reach Us</h3>
+          <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+            <div>
+              <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">
+                <i class="fas fa-envelope"></i> Email
+              </div>
+              <div>support@neobetai.com</div>
             </div>
-            <div class="author-info">
-              <div class="author-name">James K.</div>
-              <div class="author-detail">Investor | Birmingham</div>
+            <div>
+              <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">
+                <i class="fab fa-telegram"></i> Telegram
+              </div>
+              <div>@NEOBET_Support</div>
+            </div>
+            <div>
+              <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </div>
+              <div>+44 1234 567890</div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="affiliate-banner">
-      <div class="affiliate-card">
-        <div class="affiliate-title">MAXIMIZE YOUR WINNINGS</div>
-        <div class="affiliate-subtitle">Get 150% bonus on your first deposit with our trusted partner</div>
-        <a href="https://your-affiliate-link.com" target="_blank" class="affiliate-button">
-          <i class="fas fa-coins"></i> CLAIM EXCLUSIVE BONUS
-        </a>
-      </div>
-    </div>
-    
-    <div class="cta-section">
-      <div class="cta-title">Join the AI Betting Revolution</div>
-      <div class="cta-subtitle">
-        Get real-time predictions delivered to your device with our premium membership. 
-        Join thousands of smart bettors using quantum AI to gain an edge.
-      </div>
-      
-      <div class="cta-buttons">
-        <a href="https://t.me/yourTelegramGroup" target="_blank" class="cta-button primary-button">
-          <i class="fab fa-telegram"></i> JOIN TELEGRAM CHANNEL
-        </a>
-        <a href="https://wa.me/yourWhatsAppNumber" target="_blank" class="cta-button secondary-button">
-          <i class="fab fa-whatsapp"></i> WHATSAPP PREMIUM TIPS
-        </a>
       </div>
     </div>
   </section>
@@ -774,18 +1367,19 @@
     </div>
     
     <div class="footer-links">
-      <a href="#" class="footer-link">About Us</a>
-      <a href="#" class="footer-link">How It Works</a>
-      <a href="#" class="footer-link">Pricing</a>
-      <a href="#" class="footer-link">Testimonials</a>
-      <a href="#" class="footer-link">Contact</a>
+      <a href="#" class="footer-link nav-tab" data-page="about">About Us</a>
+      <a href="#" class="footer-link nav-tab" data-page="how-it-works">How It Works</a>
+      <a href="#" class="footer-link nav-tab" data-page="pricing">Pricing</a>
+      <a href="#" class="footer-link nav-tab" data-page="testimonials">Testimonials</a>
+      <a href="#" class="footer-link nav-tab" data-page="contact">Contact</a>
     </div>
     
     <div class="social-links">
-      <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-link" id="facebook-footer"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-link" id="telegram-footer"><i class="fab fa-telegram"></i></a>
+      <a href="#" class="social-link" id="whatsapp-footer"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="social-link" id="twitter-footer"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-link" id="instagram-footer"><i class="fab fa-instagram"></i></a>
     </div>
     
     <div class="disclaimer">
@@ -797,6 +1391,122 @@
   </footer>
 
   <script>
+    // Firebase configuration - REPLACE WITH YOUR ACTUAL CONFIG
+    const firebaseConfig = {
+        apiKey: "AIzaSyD-ARf8-P7wvHFrOuKDsr3o45Cr5LrLrPo",
+        authDomain: "neobet-ai.firebaseapp.com",
+        projectId: "neobet-ai",
+        storageBucket: "neobet-ai.firebasestorage.app",
+        messagingSenderId: "214741532641",
+        appId: "1:214741532641:web:10ffb04b1f115e2a2c5ca0",
+        measurementId: "G-BY4RXQH5ZW"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
+
+    // Track page views
+    function trackPageView(pageName) {
+      analytics.logEvent('page_view', {
+        page_title: pageName,
+        page_location: window.location.href,
+        page_path: window.location.pathname
+      });
+    }
+
+    // Track custom events
+    function trackEvent(eventName, eventParams = {}) {
+      analytics.logEvent(eventName, eventParams);
+    }
+
+    // Track navigation between pages
+    document.querySelectorAll('.nav-tab').forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        const pageId = this.getAttribute('data-page');
+        const pageName = this.textContent.trim();
+        
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+          page.classList.remove('active');
+        });
+        
+        // Show selected page
+        document.getElementById(pageId).classList.add('active');
+        
+        // Update active tab styling
+        document.querySelectorAll('.nav-tab').forEach(t => {
+          t.classList.remove('active');
+        });
+        this.classList.add('active');
+        
+        // Track page view
+        trackPageView(pageName);
+        
+        // Scroll to top
+        window.scrollTo(0, 0);
+      });
+    });
+
+    // Track button clicks
+    document.getElementById('telegram-button')?.addEventListener('click', () => {
+      trackEvent('telegram_button_click');
+    });
+
+    document.getElementById('whatsapp-button')?.addEventListener('click', () => {
+      trackEvent('whatsapp_button_click');
+    });
+
+    document.getElementById('affiliate-button')?.addEventListener('click', () => {
+      trackEvent('affiliate_button_click');
+    });
+
+    document.getElementById('pricing-button-how')?.addEventListener('click', () => {
+      trackEvent('pricing_button_click', { source: 'how_it_works' });
+    });
+
+    document.getElementById('pricing-button-testimonials')?.addEventListener('click', () => {
+      trackEvent('pricing_button_click', { source: 'testimonials' });
+    });
+
+    document.getElementById('free-plan-button')?.addEventListener('click', () => {
+      trackEvent('free_plan_button_click');
+    });
+
+    document.getElementById('pro-plan-button')?.addEventListener('click', () => {
+      trackEvent('pro_plan_button_click');
+    });
+
+    document.getElementById('premium-plan-button')?.addEventListener('click', () => {
+      trackEvent('premium_plan_button_click');
+    });
+
+    document.getElementById('contact-submit-button')?.addEventListener('click', () => {
+      trackEvent('contact_form_submit');
+    });
+
+    // Track social media clicks
+    document.getElementById('facebook-footer')?.addEventListener('click', () => {
+      trackEvent('social_media_click', { platform: 'facebook' });
+    });
+
+    document.getElementById('telegram-footer')?.addEventListener('click', () => {
+      trackEvent('social_media_click', { platform: 'telegram' });
+    });
+
+    document.getElementById('whatsapp-footer')?.addEventListener('click', () => {
+      trackEvent('social_media_click', { platform: 'whatsapp' });
+    });
+
+    document.getElementById('twitter-footer')?.addEventListener('click', () => {
+      trackEvent('social_media_click', { platform: 'twitter' });
+    });
+
+    document.getElementById('instagram-footer')?.addEventListener('click', () => {
+      trackEvent('social_media_click', { platform: 'instagram' });
+    });
+
     // Function to load predictions from JSON
     async function loadPredictions() {
       try {
@@ -804,6 +1514,9 @@
         document.querySelectorAll('.loading').forEach(el => {
           el.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading predictions...';
         });
+        
+        // Track prediction load attempt
+        trackEvent('predictions_load_attempt');
         
         // Fetch the predictions data
         const response = await fetch('predictions.json');
@@ -878,17 +1591,24 @@
         const todayGrid = document.querySelector('#today-predictions .prediction-grid');
         if (todayGrid && data.todayPredictions && data.todayPredictions.length > 0) {
           todayGrid.innerHTML = data.todayPredictions.map(createPredictionCard).join('');
+          trackEvent('today_predictions_loaded', { count: data.todayPredictions.length });
         } else if (todayGrid) {
           todayGrid.innerHTML = '<div class="loading">No predictions available for today</div>';
+          trackEvent('today_predictions_empty');
         }
         
         // Render tomorrow's predictions
         const tomorrowGrid = document.querySelector('#tomorrow-predictions .prediction-grid');
         if (tomorrowGrid && data.tomorrowPredictions && data.tomorrowPredictions.length > 0) {
           tomorrowGrid.innerHTML = data.tomorrowPredictions.map(createPredictionCard).join('');
+          trackEvent('tomorrow_predictions_loaded', { count: data.tomorrowPredictions.length });
         } else if (tomorrowGrid) {
           tomorrowGrid.innerHTML = '<div class="loading">No predictions available for tomorrow</div>';
+          trackEvent('tomorrow_predictions_empty');
         }
+        
+        // Track successful predictions load
+        trackEvent('predictions_load_success');
         
       } catch (error) {
         console.error('Error loading predictions:', error);
@@ -896,11 +1616,36 @@
         document.querySelectorAll('.loading').forEach(el => {
           el.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to load predictions. Please try again later.';
         });
+        
+        // Track failed predictions load
+        trackEvent('predictions_load_failed', { error: error.message });
       }
     }
     
-    // Load predictions when page loads
-    document.addEventListener('DOMContentLoaded', loadPredictions);
+    // Contact form submission
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      trackEvent('contact_form_submitted', {
+        name_length: name.length,
+        email_domain: email.split('@')[1] || '',
+        subject: subject,
+        message_length: message.length
+      });
+      
+      alert('Thank you for your message! Our team will respond within 24 hours.');
+      this.reset();
+    });
+    
+    // Track initial page view
+    document.addEventListener('DOMContentLoaded', function() {
+      trackPageView('Home');
+      loadPredictions();
+    });
   </script>
 </body>
 </html>
