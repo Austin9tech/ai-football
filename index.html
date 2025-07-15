@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NEOBET AI | Next-Gen Football Predictions</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
- <!-- Professional Favicon Setup -->
+  <!-- Professional Favicon Setup -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -20,6 +20,7 @@
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore-compat.js"></script>
   
   <style>
     :root {
@@ -639,110 +640,6 @@
       margin-bottom: 0.5rem;
     }
     
-    /* Pricing table styles */
-    .pricing-table {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    
-    .pricing-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 2rem;
-      text-align: center;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .pricing-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    }
-    
-    .pricing-card.popular {
-      border: 1px solid var(--primary);
-    }
-    
-    .pricing-card.popular::before {
-      content: "MOST POPULAR";
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--primary);
-      color: var(--darker);
-      padding: 0.3rem 1rem;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border-bottom-left-radius: 12px;
-    }
-    
-    .pricing-plan {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    
-    .pricing-price {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin: 1rem 0;
-      color: var(--light);
-    }
-    
-    .pricing-period {
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.6);
-    }
-    
-    .pricing-features {
-      list-style: none;
-      padding: 0;
-      margin: 2rem 0;
-    }
-    
-    .pricing-features li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .pricing-features li:last-child {
-      border-bottom: none;
-    }
-    
-    .pricing-button {
-      display: inline-block;
-      padding: 0.8rem 1.5rem;
-      background: linear-gradient(135deg, var(--primary), #00cc77);
-      color: var(--darker);
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      width: 100%;
-    }
-    
-    .pricing-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
-    }
-    
-    .pricing-button.secondary {
-      background: rgba(255, 255, 255, 0.1);
-      color: var(--light);
-    }
-    
-    .pricing-button.secondary:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    
     /* Contact form styles */
     .contact-form {
       max-width: 600px;
@@ -834,6 +731,33 @@
       display: block;
     }
     
+    /* Terms page styles */
+    .terms-section {
+      margin-bottom: 2rem;
+    }
+    
+    .terms-section h3 {
+      color: var(--primary);
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      border-bottom: 1px solid rgba(0, 255, 136, 0.3);
+      padding-bottom: 0.5rem;
+    }
+    
+    .terms-section p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    
+    .terms-section ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .terms-section li {
+      margin-bottom: 0.8rem;
+    }
+    
     @media (max-width: 768px) {
       .prediction-grid {
         grid-template-columns: 1fr;
@@ -854,10 +778,6 @@
       }
       
       .stats-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .pricing-table {
         grid-template-columns: 1fr;
       }
     }
@@ -893,11 +813,11 @@
   <section>
     <!-- Navigation Tabs -->
     <div class="nav-tabs">
-      <a href="#" class="nav-tab" data-page="home">Home</a>
+      <a href="#" class="nav-tab active" data-page="home">Home</a>
       <a href="#" class="nav-tab" data-page="about">About Us</a>
       <a href="#" class="nav-tab" data-page="how-it-works">How It Works</a>
-      <a href="#" class="nav-tab" data-page="pricing">Pricing</a>
       <a href="#" class="nav-tab" data-page="testimonials">Testimonials</a>
+      <a href="#" class="nav-tab" data-page="terms">Terms</a>
       <a href="#" class="nav-tab" data-page="contact">Contact</a>
     </div>
 
@@ -1104,78 +1024,6 @@
           <li>Ensure optimal staking strategies</li>
           <li>Provide clear reasoning for each recommendation</li>
         </ul>
-        
-        <div class="cta-section" style="margin-top: 3rem;">
-          <div class="cta-subtitle">
-            Ready to experience the future of sports betting?
-          </div>
-          <div class="cta-buttons">
-            <a href="#" class="nav-tab cta-button primary-button" data-page="pricing" id="pricing-button-how">
-              <i class="fas fa-star"></i> VIEW PRICING PLANS
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pricing Page -->
-    <div id="pricing" class="page">
-      <div class="page-content">
-        <h2>Choose Your Plan</h2>
-        <p>Select the subscription that matches your betting style. All plans include our 30-day profit guarantee.</p>
-        
-        <div class="pricing-table">
-          <div class="pricing-card">
-            <div class="pricing-plan">Starter</div>
-            <div class="pricing-price">FREE</div>
-            <div class="pricing-period">No credit card required</div>
-            <ul class="pricing-features">
-              <li>2 Daily Predictions</li>
-              <li>Basic Match Analysis</li>
-              <li>60-70% Confidence Level</li>
-              <li>Email Notifications</li>
-              <li>Community Support</li>
-            </ul>
-            <a href="#" class="pricing-button secondary" id="free-plan-button">Current Plan</a>
-          </div>
-          
-          <div class="pricing-card popular">
-            <div class="pricing-plan">Pro Trader</div>
-            <div class="pricing-price">£29<span style="font-size: 1rem;">/month</span></div>
-            <div class="pricing-period">Billed monthly (Save 20% with annual)</div>
-            <ul class="pricing-features">
-              <li>10-12 Daily Predictions</li>
-              <li>Advanced AI Analysis</li>
-              <li>75-85% Confidence Level</li>
-              <li>Telegram/WhatsApp Alerts</li>
-              <li>Priority Support</li>
-              <li>Weekly Portfolio Review</li>
-              <li>Value Bet Finder Tool</li>
-            </ul>
-            <a href="#" class="pricing-button" id="pro-plan-button">UPGRADE TO PRO</a>
-          </div>
-          
-          <div class="pricing-card">
-            <div class="pricing-plan">Premium</div>
-            <div class="pricing-price">£99<span style="font-size: 1rem;">/month</span></div>
-            <div class="pricing-period">Billed monthly (Save 25% with annual)</div>
-            <ul class="pricing-features">
-              <li>15-20 Daily Predictions</li>
-              <li>Quantum AI Deep Analysis</li>
-              <li>85-95% Confidence Level</li>
-              <li>Real-time SMS Alerts</li>
-              <li>24/7 VIP Support</li>
-              <li>Daily 1-on-1 Coaching</li>
-              <li>Arbitrage Opportunity Alerts</li>
-              <li>Custom Betting Strategies</li>
-            </ul>
-            <a href="#" class="pricing-button" id="premium-plan-button">GET PREMIUM</a>
-          </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 2rem;">
-          <p><strong>30-Day Profit Guarantee:</strong> If you don't see results in your first month, we'll refund your payment and give you an additional free month.</p>
-        </div>
       </div>
     </div>
 
@@ -1276,16 +1124,94 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Terms Page -->
+    <div id="terms" class="page">
+      <div class="page-content">
+        <h2>Terms of Service</h2>
+        <p>Last Updated: January 1, 2025</p>
         
-        <div class="cta-section" style="margin-top: 3rem;">
-          <div class="cta-subtitle">
-            Ready to start your success story?
-          </div>
-          <div class="cta-buttons">
-            <a href="#" class="nav-tab cta-button primary-button" data-page="pricing" id="pricing-button-testimonials">
-              <i class="fas fa-chart-line"></i> JOIN NOW
-            </a>
-          </div>
+        <div class="terms-section">
+          <h3>1. Acceptance of Terms</h3>
+          <p>By accessing or using the NEOBET AI website ("Service"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the Service.</p>
+        </div>
+        
+        <div class="terms-section">
+          <h3>2. Service Description</h3>
+          <p>NEOBET AI provides football predictions and betting insights generated by artificial intelligence. Our service includes:</p>
+          <ul>
+            <li>AI-generated match predictions</li>
+            <li>Statistical analysis of football matches</li>
+            <li>Betting market insights</li>
+            <li>Performance metrics and historical data</li>
+          </ul>
+          <p>We do not guarantee the accuracy of predictions or betting outcomes.</p>
+        </div>
+        
+        <div class="terms-section">
+          <h3>3. User Responsibilities</h3>
+          <p>As a user of our Service, you agree to:</p>
+          <ul>
+            <li>Use the Service only for lawful purposes</li>
+            <li>Be at least 18 years of age or the legal gambling age in your jurisdiction</li>
+            <li>Not share your account credentials</li>
+            <li>Not use automated systems to access our Service</li>
+            <li>Gamble responsibly and within your means</li>
+          </ul>
+        </div>
+        
+        <div class="terms-section">
+          <h3>4. Intellectual Property</h3>
+          <p>All content on the Service, including predictions, algorithms, and analysis, is the property of NEOBET AI and protected by intellectual property laws. You may not:</p>
+          <ul>
+            <li>Reproduce, duplicate, or copy any content without permission</li>
+            <li>Reverse engineer or attempt to extract source code from our Service</li>
+            <li>Use our predictions for commercial purposes without authorization</li>
+          </ul>
+        </div>
+        
+        <div class="terms-section">
+          <h3>5. Disclaimer of Warranties</h3>
+          <p>The Service is provided "as is" without warranties of any kind. NEOBET AI does not warrant that:</p>
+          <ul>
+            <li>The Service will be uninterrupted or error-free</li>
+            <li>Predictions will be accurate or profitable</li>
+            <li>Results obtained from using the Service will meet your expectations</li>
+          </ul>
+          <p>Sports betting involves risk, and you should only wager what you can afford to lose.</p>
+        </div>
+        
+        <div class="terms-section">
+          <h3>6. Limitation of Liability</h3>
+          <p>NEOBET AI shall not be liable for any:</p>
+          <ul>
+            <li>Losses incurred from betting based on our predictions</li>
+            <li>Indirect, incidental, or consequential damages</li>
+            <li>Errors or omissions in the Service content</li>
+            <li>Interruptions or delays in Service availability</li>
+          </ul>
+        </div>
+        
+        <div class="terms-section">
+          <h3>7. Privacy Policy</h3>
+          <p>Your use of the Service is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information.</p>
+        </div>
+        
+        <div class="terms-section">
+          <h3>8. Modifications to Terms</h3>
+          <p>We reserve the right to modify these terms at any time. Continued use of the Service after changes constitutes acceptance of the new terms.</p>
+        </div>
+        
+        <div class="terms-section">
+          <h3>9. Governing Law</h3>
+          <p>These Terms shall be governed by the laws of the United Kingdom, without regard to its conflict of law provisions.</p>
+        </div>
+        
+        <div class="terms-section">
+          <h3>10. Contact Information</h3>
+          <p>For questions about these Terms, please contact us at legal@neobetai.com.</p>
         </div>
       </div>
     </div>
@@ -1369,8 +1295,8 @@
     <div class="footer-links">
       <a href="#" class="footer-link nav-tab" data-page="about">About Us</a>
       <a href="#" class="footer-link nav-tab" data-page="how-it-works">How It Works</a>
-      <a href="#" class="footer-link nav-tab" data-page="pricing">Pricing</a>
       <a href="#" class="footer-link nav-tab" data-page="testimonials">Testimonials</a>
+      <a href="#" class="footer-link nav-tab" data-page="terms">Terms</a>
       <a href="#" class="footer-link nav-tab" data-page="contact">Contact</a>
     </div>
     
@@ -1393,18 +1319,19 @@
   <script>
     // Firebase configuration - REPLACE WITH YOUR ACTUAL CONFIG
     const firebaseConfig = {
-        apiKey: "AIzaSyD-ARf8-P7wvHFrOuKDsr3o45Cr5LrLrPo",
-        authDomain: "neobet-ai.firebaseapp.com",
-        projectId: "neobet-ai",
-        storageBucket: "neobet-ai.firebasestorage.app",
-        messagingSenderId: "214741532641",
-        appId: "1:214741532641:web:10ffb04b1f115e2a2c5ca0",
-        measurementId: "G-BY4RXQH5ZW"
+      apiKey: "AIzaSyD-ARf8-P7wvHFrOuKDsr3o45Cr5LrLrPo",
+      authDomain: "neobet-ai.firebaseapp.com",
+      projectId: "neobet-ai",
+      storageBucket: "neobet-ai.firebasestorage.app",
+      messagingSenderId: "214741532641",
+      appId: "1:214741532641:web:10ffb04b1f115e2a2c5ca0",
+      measurementId: "G-BY4RXQH5ZW"
     };
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const analytics = firebase.analytics();
+    const db = firebase.firestore();
 
     // Track page views
     function trackPageView(pageName) {
@@ -1413,11 +1340,31 @@
         page_location: window.location.href,
         page_path: window.location.pathname
       });
+      
+      // Log page view to Firestore
+      db.collection("page_views").add({
+        page: pageName,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        userAgent: navigator.userAgent,
+        screenWidth: window.screen.width,
+        screenHeight: window.screen.height
+      }).catch(error => {
+        console.error("Error logging page view:", error);
+      });
     }
 
     // Track custom events
     function trackEvent(eventName, eventParams = {}) {
       analytics.logEvent(eventName, eventParams);
+      
+      // Log event to Firestore
+      db.collection("events").add({
+        event: eventName,
+        params: eventParams,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      }).catch(error => {
+        console.error("Error logging event:", error);
+      });
     }
 
     // Track navigation between pages
@@ -1462,26 +1409,6 @@
       trackEvent('affiliate_button_click');
     });
 
-    document.getElementById('pricing-button-how')?.addEventListener('click', () => {
-      trackEvent('pricing_button_click', { source: 'how_it_works' });
-    });
-
-    document.getElementById('pricing-button-testimonials')?.addEventListener('click', () => {
-      trackEvent('pricing_button_click', { source: 'testimonials' });
-    });
-
-    document.getElementById('free-plan-button')?.addEventListener('click', () => {
-      trackEvent('free_plan_button_click');
-    });
-
-    document.getElementById('pro-plan-button')?.addEventListener('click', () => {
-      trackEvent('pro_plan_button_click');
-    });
-
-    document.getElementById('premium-plan-button')?.addEventListener('click', () => {
-      trackEvent('premium_plan_button_click');
-    });
-
     document.getElementById('contact-submit-button')?.addEventListener('click', () => {
       trackEvent('contact_form_submit');
     });
@@ -1507,7 +1434,7 @@
       trackEvent('social_media_click', { platform: 'instagram' });
     });
 
-    // Function to load predictions from JSON
+    // Function to load predictions from Firestore
     async function loadPredictions() {
       try {
         // Show loading state
@@ -1518,28 +1445,25 @@
         // Track prediction load attempt
         trackEvent('predictions_load_attempt');
         
-        // Fetch the predictions data
-        const response = await fetch('predictions.json');
-        if (!response.ok) throw new Error('Network response was not ok');
+        // Fetch today's predictions
+        const todaySnapshot = await db.collection("predictions")
+          .where("date", "==", "today")
+          .orderBy("confidence", "desc")
+          .limit(5)
+          .get();
         
-        const data = await response.json();
+        // Fetch tomorrow's predictions
+        const tomorrowSnapshot = await db.collection("predictions")
+          .where("date", "==", "tomorrow")
+          .orderBy("confidence", "desc")
+          .limit(5)
+          .get();
         
         // Update last updated date
         const lastUpdatedEl = document.getElementById('last-updated');
         if (lastUpdatedEl) {
-          lastUpdatedEl.textContent = `Last Updated: ${data.lastUpdated}`;
-        }
-        
-        // Update performance metrics
-        if (data.performanceMetrics) {
-          const metrics = data.performanceMetrics;
-          const metricValues = document.querySelectorAll('.metric-value');
-          if (metricValues.length >= 4) {
-            metricValues[0].textContent = metrics.accuracyRate;
-            metricValues[1].textContent = metrics.avgROI;
-            metricValues[2].textContent = metrics.matchesAnalyzed;
-            metricValues[3].textContent = metrics.userSatisfaction;
-          }
+          const now = new Date();
+          lastUpdatedEl.textContent = `Last Updated: ${now.toLocaleString()}`;
         }
         
         // Function to create prediction cards
@@ -1589,9 +1513,11 @@
         
         // Render today's predictions
         const todayGrid = document.querySelector('#today-predictions .prediction-grid');
-        if (todayGrid && data.todayPredictions && data.todayPredictions.length > 0) {
-          todayGrid.innerHTML = data.todayPredictions.map(createPredictionCard).join('');
-          trackEvent('today_predictions_loaded', { count: data.todayPredictions.length });
+        if (todayGrid && !todaySnapshot.empty) {
+          todayGrid.innerHTML = todaySnapshot.docs.map(doc => {
+            return createPredictionCard(doc.data());
+          }).join('');
+          trackEvent('today_predictions_loaded', { count: todaySnapshot.size });
         } else if (todayGrid) {
           todayGrid.innerHTML = '<div class="loading">No predictions available for today</div>';
           trackEvent('today_predictions_empty');
@@ -1599,9 +1525,11 @@
         
         // Render tomorrow's predictions
         const tomorrowGrid = document.querySelector('#tomorrow-predictions .prediction-grid');
-        if (tomorrowGrid && data.tomorrowPredictions && data.tomorrowPredictions.length > 0) {
-          tomorrowGrid.innerHTML = data.tomorrowPredictions.map(createPredictionCard).join('');
-          trackEvent('tomorrow_predictions_loaded', { count: data.tomorrowPredictions.length });
+        if (tomorrowGrid && !tomorrowSnapshot.empty) {
+          tomorrowGrid.innerHTML = tomorrowSnapshot.docs.map(doc => {
+            return createPredictionCard(doc.data());
+          }).join('');
+          trackEvent('tomorrow_predictions_loaded', { count: tomorrowSnapshot.size });
         } else if (tomorrowGrid) {
           tomorrowGrid.innerHTML = '<div class="loading">No predictions available for tomorrow</div>';
           trackEvent('tomorrow_predictions_empty');
@@ -1630,15 +1558,27 @@
       const subject = document.getElementById('subject').value;
       const message = document.getElementById('message').value;
       
-      trackEvent('contact_form_submitted', {
-        name_length: name.length,
-        email_domain: email.split('@')[1] || '',
+      // Save to Firestore
+      db.collection("contacts").add({
+        name: name,
+        email: email,
         subject: subject,
-        message_length: message.length
+        message: message,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      }).then(() => {
+        trackEvent('contact_form_submitted', {
+          name_length: name.length,
+          email_domain: email.split('@')[1] || '',
+          subject: subject,
+          message_length: message.length
+        });
+        
+        alert('Thank you for your message! Our team will respond within 24 hours.');
+        this.reset();
+      }).catch(error => {
+        console.error("Error saving contact form:", error);
+        alert('There was an error submitting your message. Please try again later.');
       });
-      
-      alert('Thank you for your message! Our team will respond within 24 hours.');
-      this.reset();
     });
     
     // Track initial page view
