@@ -212,4 +212,5 @@
         { "label": "Racing Away Loss %", "value": "60%" },
         { "label": "AI Success Rate", "value": "74%" }
       ]
-    }
+    },
+  }    
