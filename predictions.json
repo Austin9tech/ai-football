@@ -1,65 +1,215 @@
 {
-  "lastUpdated": "2025-07-15",
+  "lastUpdated": "2025-07-16",
   "performanceMetrics": {
-    "accuracyRate": "88.3%",
-    "avgROI": "25.6%",
-    "matchesAnalyzed": "7,124",
-    "userSatisfaction": "97.2%"
+    "accuracyRate": "88.5%",
+    "avgROI": "26.1%",
+    "matchesAnalyzed": "7,350",
+    "userSatisfaction": "97.5%"
   },
   "todayPredictions": [
     {
-      "match": "FC KAIRAT ALMATY vs OLIMPIJA LJUBLJANA",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Home Win",
-      "confidence": 71,
-      "analysis": "Kairat is dominant at home in European qualifiers. Olimpija has struggled in away fixtures recently, especially against aggressive pressing teams.",
+      "match": "CAMBODIA U23 vs LAOS U23",
+      "league": "ASEAN Championship U23",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 68,
+      "analysis": "Both teams typically play open football at U23 level. High-scoring trend in recent ASEAN U23 fixtures.",
       "stats": [
-        { "label": "Kairat Home Win %", "value": "78%" },
-        { "label": "Olimpija Away Loss %", "value": "58%" },
-        { "label": "H2H Home Wins", "value": "2/2" },
+        { "label": "Cambodia U23 Over 2.5", "value": "65%" },
+        { "label": "Laos U23 Over 2.5", "value": "68%" },
+        { "label": "AI Success Rate", "value": "71%" }
+      ]
+    },
+    {
+      "match": "MYANMAR U23 vs EAST TIMOR U23",
+      "league": "ASEAN Championship U23",
+      "prediction": "Home Win",
+      "confidence": 70,
+      "analysis": "Myanmar U23 stronger in regional competitions. East Timor U23 with a poor defensive record.",
+      "stats": [
+        { "label": "Myanmar U23 Win %", "value": "72%" },
+        { "label": "East Timor U23 Loss %", "value": "65%" },
         { "label": "AI Success Rate", "value": "74%" }
       ]
     },
     {
-      "match": "LINCOLN RED IMPS vs VIKINGUR GOTA",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 66,
-      "analysis": "Both teams tend to play defensively in qualifiers. Lincoln has not scored more than 1 goal in last 4 home UEFA matches. Vikingur focus on compact play.",
-      "stats": [
-        { "label": "Lincoln Home U2.5", "value": "71%" },
-        { "label": "Vikingur Away U2.5", "value": "67%" },
-        { "label": "H2H Under 2.5", "value": "2/2" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    }
-  ],
-  "tomorrowPredictions": [
-    {
-      "match": "FC DINAMO MINSK vs LUDOGORETS",
+      "match": "DINAMO MINSK vs LUDOGORETS",
       "league": "UEFA Champions League Qual.",
       "prediction": "Both Teams To Score",
       "confidence": 69,
-      "analysis": "Both clubs have strong attacking potential. Ludogorets has scored in each of their last 10 European away games. Dinamo Minsk have found form recently with 8 goals in 3 matches.",
+      "analysis": "Dinamo Minsk score at home but concede easily. Ludogorets strong away scorers in European qualifiers.",
       "stats": [
-        { "label": "Dinamo Minsk BTTS", "value": "65%" },
-        { "label": "Ludogorets BTTS", "value": "70%" },
-        { "label": "H2H BTTS", "value": "2/2" },
-        { "label": "AI Success Rate", "value": "75%" }
+        { "label": "Dinamo Minsk BTTS", "value": "68%" },
+        { "label": "Ludogorets BTTS", "value": "72%" },
+        { "label": "AI Success Rate", "value": "74%" }
       ]
     },
     {
-      "match": "LINFIELD FC vs SHELBOURNE FC",
+      "match": "LINFIELD vs SHELBOURNE",
       "league": "UEFA Champions League Qual.",
-      "prediction": "Draw",
-      "confidence": 61,
-      "analysis": "A very tight fixture between two evenly matched clubs. Previous head-to-head ended in a stalemate. Both teams with cautious first-leg approaches.",
+      "prediction": "Under 2.5 Goals",
+      "confidence": 65,
+      "analysis": "Irish-Northern Irish clashes are often tight. Defensive first-leg tactics expected.",
       "stats": [
-        { "label": "Linfield Draw Rate", "value": "38%" },
-        { "label": "Shelbourne Draw Rate", "value": "41%" },
-        { "label": "H2H Draws", "value": "1/1" },
-        { "label": "AI Success Rate", "value": "66%" }
+        { "label": "Linfield U2.5", "value": "67%" },
+        { "label": "Shelbourne U2.5", "value": "70%" },
+        { "label": "AI Success Rate", "value": "71%" }
+      ]
+    },
+    {
+      "match": "AUDA vs LARNE",
+      "league": "UEFA Conference League Qual.",
+      "prediction": "Draw or Away Win",
+      "confidence": 62,
+      "analysis": "Larne's solid European form can earn them a result. Auda less proven at this level.",
+      "stats": [
+        { "label": "Auda Home Draw/Loss", "value": "58%" },
+        { "label": "Larne Away Win %", "value": "55%" },
+        { "label": "AI Success Rate", "value": "68%" }
+      ]
+    },
+    {
+      "match": "NORWAY W vs ITALY W",
+      "league": "Euro Women - Play Offs",
+      "prediction": "Both Teams To Score",
+      "confidence": 66,
+      "analysis": "Both teams with attacking threats. Play-off tension but likely goals at both ends.",
+      "stats": [
+        { "label": "Norway W BTTS", "value": "64%" },
+        { "label": "Italy W BTTS", "value": "68%" },
+        { "label": "AI Success Rate", "value": "70%" }
+      ]
+    },
+    {
+      "match": "BOLIVIA W vs BRAZIL W",
+      "league": "Copa América Women",
+      "prediction": "Away Win & Over 2.5",
+      "confidence": 78,
+      "analysis": "Brazil Women dominant in Copa América. Expect comfortable win with multiple goals.",
+      "stats": [
+        { "label": "Brazil W Over 2.5", "value": "80%" },
+        { "label": "Bolivia W Over 2.5 Against", "value": "75%" },
+        { "label": "AI Success Rate", "value": "82%" }
       ]
     }
-  ]
-}
+  ],
+     "tomorrowPredictions": [
+    {
+      "match": "Aktobe vs Legia",
+      "league": "Europa League Qualification",
+      "prediction": "Away Win",
+      "confidence": 73,
+      "analysis": "Legia have stronger European experience and better squad depth. Aktobe will defend but Legia should find a breakthrough.",
+      "stats": [
+        { "label": "Aktobe Home Loss %", "value": "42%" },
+        { "label": "Legia Away Win %", "value": "61%" },
+        { "label": "AI Success Rate", "value": "77%" }
+      ]
+    },
+    {
+      "match": "Ilves vs Shakhtar Donetsk",
+      "league": "Europa League Qualification",
+      "prediction": "Away Win & Over 2.5 Goals",
+      "confidence": 78,
+      "analysis": "Shakhtar are clear favorites with attacking firepower. Ilves vulnerable defensively.",
+      "stats": [
+        { "label": "Ilves Home Conceded", "value": "2.1" },
+        { "label": "Shakhtar Avg Goals", "value": "2.8" },
+        { "label": "AI Success Rate", "value": "81%" }
+      ]
+    },
+    {
+      "match": "Hacken vs Trnava",
+      "league": "Europa League Qualification",
+      "prediction": "Home Win",
+      "confidence": 70,
+      "analysis": "Hacken's home form is strong. Trnava struggle away in Europe.",
+      "stats": [
+        { "label": "Hacken Home Win %", "value": "68%" },
+        { "label": "Trnava Away Loss %", "value": "57%" },
+        { "label": "AI Success Rate", "value": "74%" }
+      ]
+    },
+    {
+      "match": "CFR Cluj vs Paks",
+      "league": "Europa League Qualification",
+      "prediction": "Under 2.5 Goals",
+      "confidence": 65,
+      "analysis": "Both teams cautious in European qualifiers. Tight, low-scoring expected.",
+      "stats": [
+        { "label": "Cluj Home U2.5", "value": "70%" },
+        { "label": "Paks Away U2.5", "value": "68%" },
+        { "label": "AI Success Rate", "value": "69%" }
+      ]
+    },
+    {
+      "match": "Celje vs Sabah Baku",
+      "league": "Europa League Qualification",
+      "prediction": "Draw",
+      "confidence": 61,
+      "analysis": "Balanced matchup on paper. Both teams cautious in first leg.",
+      "stats": [
+        { "label": "Celje Draw %", "value": "35%" },
+        { "label": "Sabah Baku Draw %", "value": "37%" },
+        { "label": "AI Success Rate", "value": "67%" }
+      ]
+    },
+    {
+      "match": "H. Beer Sheva vs Levski Sofia",
+      "league": "Europa League Qualification",
+      "prediction": "Both Teams To Score",
+      "confidence": 67,
+      "analysis": "Both sides strong offensively but leaky at the back in Europe.",
+      "stats": [
+        { "label": "Beer Sheva BTTS", "value": "68%" },
+        { "label": "Levski BTTS", "value": "66%" },
+        { "label": "AI Success Rate", "value": "71%" }
+      ]
+    },
+    {
+      "match": "Prishtina vs Sheriff Tiraspol",
+      "league": "Europa League Qualification",
+      "prediction": "Away Win",
+      "confidence": 75,
+      "analysis": "Sheriff have European pedigree, should dominate possession.",
+      "stats": [
+        { "label": "Prishtina Home Loss %", "value": "45%" },
+        { "label": "Sheriff Away Win %", "value": "62%" },
+        { "label": "AI Success Rate", "value": "79%" }
+      ]
+    },
+    {
+      "match": "Partizan vs AEK Larnaca",
+      "league": "Europa League Qualification",
+      "prediction": "Home Win or Draw",
+      "confidence": 69,
+      "analysis": "Partizan solid at home, AEK tricky but less proven away.",
+      "stats": [
+        { "label": "Partizan Home Win %", "value": "72%" },
+        { "label": "AEK Away Loss %", "value": "40%" },
+        { "label": "AI Success Rate", "value": "73%" }
+      ]
+    },
+    {
+      "match": "BFC Daugavpils vs Vllaznia",
+      "league": "Conference League Qualification",
+      "prediction": "Draw or Away Win",
+      "confidence": 64,
+      "analysis": "Vllaznia with more experience, but tight away.",
+      "stats": [
+        { "label": "Daugavpils Draw %", "value": "35%" },
+        { "label": "Vllaznia Away Win %", "value": "45%" },
+        { "label": "AI Success Rate", "value": "68%" }
+      ]
+    },
+    {
+      "match": "Dila Gori vs Racing Luxembourg",
+      "league": "Conference League Qualification",
+      "prediction": "Home Win",
+      "confidence": 70,
+      "analysis": "Dila Gori favorites at home, Racing Luxembourg weaker away.",
+      "stats": [
+        { "label": "Dila Gori Home Win %", "value": "65%" },
+        { "label": "Racing Away Loss %", "value": "60%" },
+        { "label": "AI Success Rate", "value": "74%" }
+      ]
+    }
