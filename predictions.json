@@ -92,7 +92,7 @@
       ]
     }
   ],
-     "tomorrowPredictions": [
+  "tomorrowPredictions": [
     {
       "match": "Aktobe vs Legia",
       "league": "Europa League Qualification",
@@ -212,5 +212,6 @@
         { "label": "Racing Away Loss %", "value": "60%" },
         { "label": "AI Success Rate", "value": "74%" }
       ]
-    },
-  }    
+    }
+  ]
+}
