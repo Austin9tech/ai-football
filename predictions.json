@@ -212,6 +212,174 @@
         { "label": "Racing Away Loss %", "value": "60%" },
         { "label": "AI Success Rate", "value": "74%" }
       ]
+    },
+    {
+      "match": "Atlanta Utd vs Chicago Fire",
+      "league": "MLS",
+      "prediction": "Home Win",
+      "confidence": 72,
+      "analysis": "Atlanta United strong at home, Chicago Fire inconsistent away.",
+      "stats": [
+        { "label": "Atlanta Home Win %", "value": "69%" },
+        { "label": "Chicago Away Loss %", "value": "61%" },
+        { "label": "AI Success Rate", "value": "75%" }
+      ]
+    },
+    {
+      "match": "Charlotte vs DC United",
+      "league": "MLS",
+      "prediction": "Both Teams To Score",
+      "confidence": 66,
+      "analysis": "Both sides have scoring potential but defensive gaps.",
+      "stats": [
+        { "label": "Charlotte BTTS", "value": "65%" },
+        { "label": "DC United BTTS", "value": "67%" },
+        { "label": "AI Success Rate", "value": "71%" }
+      ]
+    },
+    {
+      "match": "FC Cincinnati vs Inter Miami",
+      "league": "MLS",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 74,
+      "analysis": "Cincinnati and Miami often see high-scoring matches.",
+      "stats": [
+        { "label": "Cincinnati Over 2.5", "value": "72%" },
+        { "label": "Miami Over 2.5", "value": "74%" },
+        { "label": "AI Success Rate", "value": "78%" }
+      ]
+    },
+    {
+      "match": "New York Red Bulls vs New England Revolution",
+      "league": "MLS",
+      "prediction": "Home Win or Draw",
+      "confidence": 68,
+      "analysis": "Red Bulls strong at home, Revolution struggle away.",
+      "stats": [
+        { "label": "NYRB Home Win %", "value": "65%" },
+        { "label": "Revolution Away Loss %", "value": "58%" },
+        { "label": "AI Success Rate", "value": "72%" }
+      ]
+    },
+    {
+      "match": "Orlando City vs New York City",
+      "league": "MLS",
+      "prediction": "Under 2.5 Goals",
+      "confidence": 63,
+      "analysis": "Tight encounters typical between these sides.",
+      "stats": [
+        { "label": "Orlando U2.5", "value": "61%" },
+        { "label": "NYCFC U2.5", "value": "64%" },
+        { "label": "AI Success Rate", "value": "67%" }
+      ]
+    },
+    {
+      "match": "Philadelphia Union vs CF Montreal",
+      "league": "MLS",
+      "prediction": "Home Win",
+      "confidence": 75,
+      "analysis": "Philadelphia dominant at home, Montreal vulnerable away.",
+      "stats": [
+        { "label": "Union Home Win %", "value": "71%" },
+        { "label": "Montreal Away Loss %", "value": "63%" },
+        { "label": "AI Success Rate", "value": "79%" }
+      ]
+    },
+    {
+      "match": "Houston Dynamo vs Vancouver Whitecaps",
+      "league": "MLS",
+      "prediction": "Both Teams To Score",
+      "confidence": 67,
+      "analysis": "Both teams with attacking quality but leaky defense.",
+      "stats": [
+        { "label": "Houston BTTS", "value": "66%" },
+        { "label": "Vancouver BTTS", "value": "68%" },
+        { "label": "AI Success Rate", "value": "70%" }
+      ]
+    },
+    {
+      "match": "Minnesota United vs Los Angeles FC",
+      "league": "MLS",
+      "prediction": "Away Win or Draw",
+      "confidence": 69,
+      "analysis": "LAFC have quality to get a result despite tough away fixture.",
+      "stats": [
+        { "label": "Minnesota Home Draw/Loss %", "value": "55%" },
+        { "label": "LAFC Away Win %", "value": "58%" },
+        { "label": "AI Success Rate", "value": "72%" }
+      ]
+    },
+    {
+      "match": "Nashville SC vs Columbus Crew",
+      "league": "MLS",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 71,
+      "analysis": "Both teams play attacking football with recent high-scoring games.",
+      "stats": [
+        { "label": "Nashville Over 2.5", "value": "68%" },
+        { "label": "Columbus Over 2.5", "value": "72%" },
+        { "label": "AI Success Rate", "value": "75%" }
+      ]
+    },
+    {
+      "match": "Seattle Sounders vs Colorado Rapids",
+      "league": "MLS",
+      "prediction": "Home Win",
+      "confidence": 76,
+      "analysis": "Sounders strong at home, Rapids weak travelers.",
+      "stats": [
+        { "label": "Seattle Home Win %", "value": "72%" },
+        { "label": "Colorado Away Loss %", "value": "65%" },
+        { "label": "AI Success Rate", "value": "80%" }
+      ]
+    },
+    {
+      "match": "Los Angeles Galaxy vs Austin FC",
+      "league": "MLS",
+      "prediction": "Both Teams To Score",
+      "confidence": 68,
+      "analysis": "Both sides vulnerable at the back but good attacking options.",
+      "stats": [
+        { "label": "Galaxy BTTS", "value": "67%" },
+        { "label": "Austin BTTS", "value": "69%" },
+        { "label": "AI Success Rate", "value": "72%" }
+      ]
+    },
+    {
+      "match": "Portland Timbers vs Real Salt Lake",
+      "league": "MLS",
+      "prediction": "Draw or Away Win",
+      "confidence": 65,
+      "analysis": "Real Salt Lake solid on the road, Portland inconsistent.",
+      "stats": [
+        { "label": "Portland Home Draw/Loss %", "value": "54%" },
+        { "label": "RSL Away Win %", "value": "57%" },
+        { "label": "AI Success Rate", "value": "69%" }
+      ]
+    },
+    {
+      "match": "San Diego FC vs Toronto FC",
+      "league": "MLS",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 70,
+      "analysis": "Both teams likely to push for goals in an open game.",
+      "stats": [
+        { "label": "San Diego Over 2.5", "value": "67%" },
+        { "label": "Toronto Over 2.5", "value": "69%" },
+        { "label": "AI Success Rate", "value": "74%" }
+      ]
+    },
+    {
+      "match": "San Jose Earthquakes vs FC Dallas",
+      "league": "MLS",
+      "prediction": "Both Teams To Score",
+      "confidence": 69,
+      "analysis": "High chance of goals with defensive weaknesses on both sides.",
+      "stats": [
+        { "label": "San Jose BTTS", "value": "68%" },
+        { "label": "Dallas BTTS", "value": "70%" },
+        { "label": "AI Success Rate", "value": "73%" }
+      ]
     }
   ]
 }
