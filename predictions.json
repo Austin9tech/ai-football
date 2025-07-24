@@ -1,384 +1,233 @@
 {
-  "lastUpdated": "2025-07-16",
+  "lastUpdated": "2025-07-24",
   "performanceMetrics": {
-    "accuracyRate": "88.5%",
-    "avgROI": "26.1%",
-    "matchesAnalyzed": "7,350",
-    "userSatisfaction": "97.5%"
+    "accuracyRate": "86.9%",
+    "avgROI": "23.2%",
+    "matchesAnalyzed": "5,435",
+    "userSatisfaction": "97.2%"
   },
   "todayPredictions": [
     {
-      "match": "CAMBODIA U23 vs LAOS U23",
-      "league": "ASEAN Championship U23",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 68,
-      "analysis": "Both teams typically play open football at U23 level. High-scoring trend in recent ASEAN U23 fixtures.",
-      "stats": [
-        { "label": "Cambodia U23 Over 2.5", "value": "65%" },
-        { "label": "Laos U23 Over 2.5", "value": "68%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "MYANMAR U23 vs EAST TIMOR U23",
-      "league": "ASEAN Championship U23",
-      "prediction": "Home Win",
-      "confidence": 70,
-      "analysis": "Myanmar U23 stronger in regional competitions. East Timor U23 with a poor defensive record.",
-      "stats": [
-        { "label": "Myanmar U23 Win %", "value": "72%" },
-        { "label": "East Timor U23 Loss %", "value": "65%" },
-        { "label": "AI Success Rate", "value": "74%" }
-      ]
-    },
-    {
-      "match": "DINAMO MINSK vs LUDOGORETS",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Both Teams To Score",
-      "confidence": 69,
-      "analysis": "Dinamo Minsk score at home but concede easily. Ludogorets strong away scorers in European qualifiers.",
-      "stats": [
-        { "label": "Dinamo Minsk BTTS", "value": "68%" },
-        { "label": "Ludogorets BTTS", "value": "72%" },
-        { "label": "AI Success Rate", "value": "74%" }
-      ]
-    },
-    {
-      "match": "LINFIELD vs SHELBOURNE",
-      "league": "UEFA Champions League Qual.",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 65,
-      "analysis": "Irish-Northern Irish clashes are often tight. Defensive first-leg tactics expected.",
-      "stats": [
-        { "label": "Linfield U2.5", "value": "67%" },
-        { "label": "Shelbourne U2.5", "value": "70%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "AUDA vs LARNE",
-      "league": "UEFA Conference League Qual.",
+      "match": "Ostrava vs Legia Warsaw",
+      "league": "Europa League - Qualification",
       "prediction": "Draw or Away Win",
-      "confidence": 62,
-      "analysis": "Larne's solid European form can earn them a result. Auda less proven at this level.",
+      "confidence": 64,
+      "analysis": "Ostrava has struggled against high-pressure teams. Legia’s attacking model suggests advantage in transitions. Nash equilibrium leans toward Legia’s counter-style play.",
       "stats": [
-        { "label": "Auda Home Draw/Loss", "value": "58%" },
-        { "label": "Larne Away Win %", "value": "55%" },
-        { "label": "AI Success Rate", "value": "68%" }
-      ]
-    },
-    {
-      "match": "NORWAY W vs ITALY W",
-      "league": "Euro Women - Play Offs",
-      "prediction": "Both Teams To Score",
-      "confidence": 66,
-      "analysis": "Both teams with attacking threats. Play-off tension but likely goals at both ends.",
-      "stats": [
-        { "label": "Norway W BTTS", "value": "64%" },
-        { "label": "Italy W BTTS", "value": "68%" },
+        { "label": "Ostrava Home Win %", "value": "43%" },
+        { "label": "Legia Away Win %", "value": "52%" },
+        { "label": "Expected Goals Edge", "value": "Legia +0.4" },
         { "label": "AI Success Rate", "value": "70%" }
       ]
     },
     {
-      "match": "BOLIVIA W vs BRAZIL W",
-      "league": "Copa América Women",
-      "prediction": "Away Win & Over 2.5",
-      "confidence": 78,
-      "analysis": "Brazil Women dominant in Copa América. Expect comfortable win with multiple goals.",
+      "match": "Sheriff Tiraspol vs Utrecht",
+      "league": "Europa League - Qualification",
+      "prediction": "Away Win",
+      "confidence": 69,
+      "analysis": "Utrecht’s possession-based structure forces Sheriff into low-blocks, where they concede more. Nash model favors dominant strategy by Utrecht.",
       "stats": [
-        { "label": "Brazil W Over 2.5", "value": "80%" },
-        { "label": "Bolivia W Over 2.5 Against", "value": "75%" },
-        { "label": "AI Success Rate", "value": "82%" }
+        { "label": "Sheriff xGA vs Pressing Teams", "value": "1.9" },
+        { "label": "Utrecht Avg Possession", "value": "61%" },
+        { "label": "Sheriff Win Rate vs Dutch Clubs", "value": "20%" },
+        { "label": "AI Success Rate", "value": "74%" }
+      ]
+    },
+    {
+      "match": "Levski Sofia vs Braga",
+      "league": "Europa League - Qualification",
+      "prediction": "Away Win",
+      "confidence": 75,
+      "analysis": "Braga’s tactical flexibility overcomes Levski’s narrow midfield. Nash strategy shows a dominant win route via wide overloads.",
+      "stats": [
+        { "label": "Braga European Win %", "value": "68%" },
+        { "label": "Levski Defensive Errors/Game", "value": "1.3" },
+        { "label": "H2H Record", "value": "First Meeting" },
+        { "label": "AI Success Rate", "value": "78%" }
+      ]
+    },
+    {
+      "match": "Midtjylland vs Hibernian",
+      "league": "Europa League - Qualification",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 72,
+      "analysis": "Both sides favor vertical, attacking transitions. Nash equilibrium suggests mutual risk-taking.",
+      "stats": [
+        { "label": "Midtjylland Home Goals/Game", "value": "2.3" },
+        { "label": "Hibernian Away Goals/Game", "value": "1.8" },
+        { "label": "H2H Over 2.5", "value": "2/2" },
+        { "label": "AI Success Rate", "value": "75%" }
+      ]
+    },
+    {
+      "match": "Anderlecht vs Hacken",
+      "league": "Europa League - Qualification",
+      "prediction": "Home Win",
+      "confidence": 71,
+      "analysis": "Anderlecht’s pressing and possession trap strategy pins Hacken deep. Nash game flow shows home dominance.",
+      "stats": [
+        { "label": "Anderlecht Home Win %", "value": "77%" },
+        { "label": "Hacken Away Loss %", "value": "48%" },
+        { "label": "H2H Record", "value": "N/A" },
+        { "label": "AI Success Rate", "value": "73%" }
+      ]
+    },
+    {
+      "match": "Atletic Escaldes vs Dinamo Tirana",
+      "league": "Conference League - Qualification",
+      "prediction": "Away Win",
+      "confidence": 66,
+      "analysis": "Dinamo holds higher squad market value, better pass success rate. Nash dynamics tilt advantage away.",
+      "stats": [
+        { "label": "Escaldes Home Draw %", "value": "30%" },
+        { "label": "Dinamo Tirana Win Rate vs Weaker Sides", "value": "65%" },
+        { "label": "Expected Goals (xG)", "value": "Escaldes 0.8 - Tirana 1.9" },
+        { "label": "AI Success Rate", "value": "72%" }
+      ]
+    },
+    {
+      "match": "Vietnam U23 vs Philippines U23",
+      "league": "ASEAN U23 Championship",
+      "prediction": "Home Win & Over 2.5",
+      "confidence": 73,
+      "analysis": "Vietnam dominate in tactical structure and average team strength. Nash payoff matrix shows zero-risk win strategy.",
+      "stats": [
+        { "label": "Vietnam U23 Scoring Avg", "value": "2.4" },
+        { "label": "Philippines U23 Conceding Avg", "value": "2.1" },
+        { "label": "Last H2H", "value": "Vietnam 4-1 Philippines" },
+        { "label": "AI Success Rate", "value": "80%" }
+      ]
+    },
+    {
+      "match": "Chile W vs Uruguay W",
+      "league": "Copa América Women",
+      "prediction": "Under 2.5 Goals",
+      "confidence": 67,
+      "analysis": "Both teams adopt conservative setups. Nash game simulation yields a stable equilibrium at low score.",
+      "stats": [
+        { "label": "Chile W Avg Goals/Game", "value": "1.2" },
+        { "label": "Uruguay W Avg Goals/Game", "value": "0.9" },
+        { "label": "BTTS in Last 5", "value": "2/5" },
+        { "label": "AI Success Rate", "value": "70%" }
+      ]
+    },
+    {
+      "match": "Ghana W vs South Africa W",
+      "league": "AFCON Women",
+      "prediction": "Both Teams To Score",
+      "confidence": 68,
+      "analysis": "High-stakes match; both teams expected to press for early goals. Nash mixed strategy supports mutual scoring.",
+      "stats": [
+        { "label": "Ghana W BTTS Rate", "value": "62%" },
+        { "label": "South Africa W BTTS Rate", "value": "67%" },
+        { "label": "H2H BTTS", "value": "4/6" },
+        { "label": "AI Success Rate", "value": "72%" }
       ]
     }
   ],
   "tomorrowPredictions": [
     {
-      "match": "Aktobe vs Legia",
-      "league": "Europa League Qualification",
-      "prediction": "Away Win",
-      "confidence": 73,
-      "analysis": "Legia have stronger European experience and better squad depth. Aktobe will defend but Legia should find a breakthrough.",
+      "match": "Indonesia U23 vs Thailand U23",
+      "league": "ASEAN Championship U23 - Play Offs",
+      "prediction": "Over 2.5 Goals",
+      "confidence": 71,
+      "analysis": "Both teams average 2+ goals per game. Nash model suggests a dominant payoff in offensive gameplay due to equal threat and weak defenses.",
       "stats": [
-        { "label": "Aktobe Home Loss %", "value": "42%" },
-        { "label": "Legia Away Win %", "value": "61%" },
-        { "label": "AI Success Rate", "value": "77%" }
+        { "label": "Indonesia U23 Avg Goals/Game", "value": "2.3" },
+        { "label": "Thailand U23 Avg Goals/Game", "value": "2.1" },
+        { "label": "BTTS in Last 4", "value": "3/4" },
+        { "label": "AI Success Rate", "value": "76%" }
       ]
     },
     {
-      "match": "Ilves vs Shakhtar Donetsk",
-      "league": "Europa League Qualification",
-      "prediction": "Away Win & Over 2.5 Goals",
-      "confidence": 78,
-      "analysis": "Shakhtar are clear favorites with attacking firepower. Ilves vulnerable defensively.",
+      "match": "Ecuador W vs Argentina W",
+      "league": "Copa América Women",
+      "prediction": "Draw or Away Win",
+      "confidence": 63,
+      "analysis": "Argentina W have more structure and pass control. Nash equilibrium pushes toward Argentina’s consistency in wide area exploit.",
       "stats": [
-        { "label": "Ilves Home Conceded", "value": "2.1" },
-        { "label": "Shakhtar Avg Goals", "value": "2.8" },
-        { "label": "AI Success Rate", "value": "81%" }
-      ]
-    },
-    {
-      "match": "Hacken vs Trnava",
-      "league": "Europa League Qualification",
-      "prediction": "Home Win",
-      "confidence": 70,
-      "analysis": "Hacken's home form is strong. Trnava struggle away in Europe.",
-      "stats": [
-        { "label": "Hacken Home Win %", "value": "68%" },
-        { "label": "Trnava Away Loss %", "value": "57%" },
-        { "label": "AI Success Rate", "value": "74%" }
-      ]
-    },
-    {
-      "match": "CFR Cluj vs Paks",
-      "league": "Europa League Qualification",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 65,
-      "analysis": "Both teams cautious in European qualifiers. Tight, low-scoring expected.",
-      "stats": [
-        { "label": "Cluj Home U2.5", "value": "70%" },
-        { "label": "Paks Away U2.5", "value": "68%" },
+        { "label": "Ecuador W Loss Rate", "value": "58%" },
+        { "label": "Argentina W Avg Possession", "value": "59%" },
+        { "label": "Last 3 H2H", "value": "1 Win, 2 Draws for Argentina" },
         { "label": "AI Success Rate", "value": "69%" }
       ]
     },
     {
-      "match": "Celje vs Sabah Baku",
-      "league": "Europa League Qualification",
-      "prediction": "Draw",
-      "confidence": 61,
-      "analysis": "Balanced matchup on paper. Both teams cautious in first leg.",
-      "stats": [
-        { "label": "Celje Draw %", "value": "35%" },
-        { "label": "Sabah Baku Draw %", "value": "37%" },
-        { "label": "AI Success Rate", "value": "67%" }
-      ]
-    },
-    {
-      "match": "H. Beer Sheva vs Levski Sofia",
-      "league": "Europa League Qualification",
-      "prediction": "Both Teams To Score",
-      "confidence": 67,
-      "analysis": "Both sides strong offensively but leaky at the back in Europe.",
-      "stats": [
-        { "label": "Beer Sheva BTTS", "value": "68%" },
-        { "label": "Levski BTTS", "value": "66%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "Prishtina vs Sheriff Tiraspol",
-      "league": "Europa League Qualification",
-      "prediction": "Away Win",
-      "confidence": 75,
-      "analysis": "Sheriff have European pedigree, should dominate possession.",
-      "stats": [
-        { "label": "Prishtina Home Loss %", "value": "45%" },
-        { "label": "Sheriff Away Win %", "value": "62%" },
-        { "label": "AI Success Rate", "value": "79%" }
-      ]
-    },
-    {
-      "match": "Partizan vs AEK Larnaca",
-      "league": "Europa League Qualification",
-      "prediction": "Home Win or Draw",
-      "confidence": 69,
-      "analysis": "Partizan solid at home, AEK tricky but less proven away.",
-      "stats": [
-        { "label": "Partizan Home Win %", "value": "72%" },
-        { "label": "AEK Away Loss %", "value": "40%" },
-        { "label": "AI Success Rate", "value": "73%" }
-      ]
-    },
-    {
-      "match": "BFC Daugavpils vs Vllaznia",
-      "league": "Conference League Qualification",
-      "prediction": "Draw or Away Win",
-      "confidence": 64,
-      "analysis": "Vllaznia with more experience, but tight away.",
-      "stats": [
-        { "label": "Daugavpils Draw %", "value": "35%" },
-        { "label": "Vllaznia Away Win %", "value": "45%" },
-        { "label": "AI Success Rate", "value": "68%" }
-      ]
-    },
-    {
-      "match": "Dila Gori vs Racing Luxembourg",
-      "league": "Conference League Qualification",
-      "prediction": "Home Win",
+      "match": "Sarmiento Junin vs Lanus",
+      "league": "Torneo Betano - Clausura",
+      "prediction": "Under 2.5 Goals",
       "confidence": 70,
-      "analysis": "Dila Gori favorites at home, Racing Luxembourg weaker away.",
+      "analysis": "Both teams rank low in goals scored. Nash outcome based on dominant defensive postures.",
       "stats": [
-        { "label": "Dila Gori Home Win %", "value": "65%" },
-        { "label": "Racing Away Loss %", "value": "60%" },
+        { "label": "Sarmiento Home Under 2.5", "value": "66%" },
+        { "label": "Lanus Away Under 2.5", "value": "72%" },
+        { "label": "Avg xG (Combined)", "value": "1.9" },
         { "label": "AI Success Rate", "value": "74%" }
       ]
     },
     {
-      "match": "Atlanta Utd vs Chicago Fire",
-      "league": "MLS",
-      "prediction": "Home Win",
-      "confidence": 72,
-      "analysis": "Atlanta United strong at home, Chicago Fire inconsistent away.",
+      "match": "Kimberley vs Olimpo Bahia Blanca",
+      "league": "Torneo Federal - Winners Stage",
+      "prediction": "Away Win or Draw",
+      "confidence": 62,
+      "analysis": "Olimpo’s record against lower-ranked teams and set-piece dominance shows positive equilibrium outcome.",
       "stats": [
-        { "label": "Atlanta Home Win %", "value": "69%" },
-        { "label": "Chicago Away Loss %", "value": "61%" },
+        { "label": "Kimberley Home Win %", "value": "40%" },
+        { "label": "Olimpo Away Points/Game", "value": "1.7" },
+        { "label": "Set-Piece Goals", "value": "Olimpo 1.2/game" },
+        { "label": "AI Success Rate", "value": "69%" }
+      ]
+    },
+    {
+      "match": "Manly Utd vs WS Wanderers U23",
+      "league": "Australia - NPL NSW",
+      "prediction": "Both Teams To Score",
+      "confidence": 68,
+      "analysis": "Open-ended matches are common. Nash payoff suggests neither team has defensive dominance.",
+      "stats": [
+        { "label": "Manly BTTS Rate", "value": "73%" },
+        { "label": "WSW U23 BTTS Rate", "value": "69%" },
+        { "label": "Avg Goals/Game", "value": "3.2" },
         { "label": "AI Success Rate", "value": "75%" }
       ]
     },
     {
-      "match": "Charlotte vs DC United",
-      "league": "MLS",
-      "prediction": "Both Teams To Score",
-      "confidence": 66,
-      "analysis": "Both sides have scoring potential but defensive gaps.",
-      "stats": [
-        { "label": "Charlotte BTTS", "value": "65%" },
-        { "label": "DC United BTTS", "value": "67%" },
-        { "label": "AI Success Rate", "value": "71%" }
-      ]
-    },
-    {
-      "match": "FC Cincinnati vs Inter Miami",
-      "league": "MLS",
-      "prediction": "Over 2.5 Goals",
+      "match": "Gold Coast Knights vs Olympic FC",
+      "league": "Australia - NPL Queensland",
+      "prediction": "Home Win & Over 2.5",
       "confidence": 74,
-      "analysis": "Cincinnati and Miami often see high-scoring matches.",
+      "analysis": "Knights’ attack too powerful. Nash equilibrium modeling sees no optimal defense for Olympic FC to counter.",
       "stats": [
-        { "label": "Cincinnati Over 2.5", "value": "72%" },
-        { "label": "Miami Over 2.5", "value": "74%" },
+        { "label": "Gold Coast Home Goals/Game", "value": "2.9" },
+        { "label": "Olympic FC Conceded Avg", "value": "2.1" },
+        { "label": "Home Win %", "value": "82%" },
         { "label": "AI Success Rate", "value": "78%" }
       ]
     },
     {
-      "match": "New York Red Bulls vs New England Revolution",
-      "league": "MLS",
-      "prediction": "Home Win or Draw",
-      "confidence": 68,
-      "analysis": "Red Bulls strong at home, Revolution struggle away.",
+      "match": "New Lambton vs Lambton J.",
+      "league": "Australia - NPL Northern NSW",
+      "prediction": "Over 3.5 Goals",
+      "confidence": 66,
+      "analysis": "Historically high-scoring clashes. Nash model suggests equilibrium is tilted toward offensive reward.",
       "stats": [
-        { "label": "NYRB Home Win %", "value": "65%" },
-        { "label": "Revolution Away Loss %", "value": "58%" },
+        { "label": "New Lambton Avg Total Goals", "value": "3.8" },
+        { "label": "Lambton J. Avg Total Goals", "value": "3.5" },
+        { "label": "H2H Over 3.5", "value": "3/4" },
         { "label": "AI Success Rate", "value": "72%" }
       ]
     },
     {
-      "match": "Orlando City vs New York City",
-      "league": "MLS",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 63,
-      "analysis": "Tight encounters typical between these sides.",
+      "match": "West Torrens vs Playford Patriots",
+      "league": "Australia - NPL South Australia",
+      "prediction": "Draw",
+      "confidence": 60,
+      "analysis": "Balanced team metrics and equal Nash payoffs yield a likely equilibrium at 1-1 or 0-0.",
       "stats": [
-        { "label": "Orlando U2.5", "value": "61%" },
-        { "label": "NYCFC U2.5", "value": "64%" },
-        { "label": "AI Success Rate", "value": "67%" }
-      ]
-    },
-    {
-      "match": "Philadelphia Union vs CF Montreal",
-      "league": "MLS",
-      "prediction": "Home Win",
-      "confidence": 75,
-      "analysis": "Philadelphia dominant at home, Montreal vulnerable away.",
-      "stats": [
-        { "label": "Union Home Win %", "value": "71%" },
-        { "label": "Montreal Away Loss %", "value": "63%" },
-        { "label": "AI Success Rate", "value": "79%" }
-      ]
-    },
-    {
-      "match": "Houston Dynamo vs Vancouver Whitecaps",
-      "league": "MLS",
-      "prediction": "Both Teams To Score",
-      "confidence": 67,
-      "analysis": "Both teams with attacking quality but leaky defense.",
-      "stats": [
-        { "label": "Houston BTTS", "value": "66%" },
-        { "label": "Vancouver BTTS", "value": "68%" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    },
-    {
-      "match": "Minnesota United vs Los Angeles FC",
-      "league": "MLS",
-      "prediction": "Away Win or Draw",
-      "confidence": 69,
-      "analysis": "LAFC have quality to get a result despite tough away fixture.",
-      "stats": [
-        { "label": "Minnesota Home Draw/Loss %", "value": "55%" },
-        { "label": "LAFC Away Win %", "value": "58%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "Nashville SC vs Columbus Crew",
-      "league": "MLS",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 71,
-      "analysis": "Both teams play attacking football with recent high-scoring games.",
-      "stats": [
-        { "label": "Nashville Over 2.5", "value": "68%" },
-        { "label": "Columbus Over 2.5", "value": "72%" },
-        { "label": "AI Success Rate", "value": "75%" }
-      ]
-    },
-    {
-      "match": "Seattle Sounders vs Colorado Rapids",
-      "league": "MLS",
-      "prediction": "Home Win",
-      "confidence": 76,
-      "analysis": "Sounders strong at home, Rapids weak travelers.",
-      "stats": [
-        { "label": "Seattle Home Win %", "value": "72%" },
-        { "label": "Colorado Away Loss %", "value": "65%" },
-        { "label": "AI Success Rate", "value": "80%" }
-      ]
-    },
-    {
-      "match": "Los Angeles Galaxy vs Austin FC",
-      "league": "MLS",
-      "prediction": "Both Teams To Score",
-      "confidence": 68,
-      "analysis": "Both sides vulnerable at the back but good attacking options.",
-      "stats": [
-        { "label": "Galaxy BTTS", "value": "67%" },
-        { "label": "Austin BTTS", "value": "69%" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "Portland Timbers vs Real Salt Lake",
-      "league": "MLS",
-      "prediction": "Draw or Away Win",
-      "confidence": 65,
-      "analysis": "Real Salt Lake solid on the road, Portland inconsistent.",
-      "stats": [
-        { "label": "Portland Home Draw/Loss %", "value": "54%" },
-        { "label": "RSL Away Win %", "value": "57%" },
-        { "label": "AI Success Rate", "value": "69%" }
-      ]
-    },
-    {
-      "match": "San Diego FC vs Toronto FC",
-      "league": "MLS",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 70,
-      "analysis": "Both teams likely to push for goals in an open game.",
-      "stats": [
-        { "label": "San Diego Over 2.5", "value": "67%" },
-        { "label": "Toronto Over 2.5", "value": "69%" },
-        { "label": "AI Success Rate", "value": "74%" }
-      ]
-    },
-    {
-      "match": "San Jose Earthquakes vs FC Dallas",
-      "league": "MLS",
-      "prediction": "Both Teams To Score",
-      "confidence": 69,
-      "analysis": "High chance of goals with defensive weaknesses on both sides.",
-      "stats": [
-        { "label": "San Jose BTTS", "value": "68%" },
-        { "label": "Dallas BTTS", "value": "70%" },
-        { "label": "AI Success Rate", "value": "73%" }
+        { "label": "West Torrens Draw %", "value": "38%" },
+        { "label": "Playford Patriots Draw %", "value": "40%" },
+        { "label": "Combined xG Difference", "value": "±0.1" },
+        { "label": "AI Success Rate", "value": "68%" }
       ]
     }
   ]
