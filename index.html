@@ -359,6 +359,39 @@
       font-weight: 600;
     }
     
+    .markets-section {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      border-left: 3px solid #ffcc00;
+    }
+    
+    .markets-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.5rem;
+      color: #ffcc00;
+      font-weight: 600;
+      font-size: clamp(0.85rem, 2vw, 0.9rem);
+    }
+    
+    .markets-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .market-pill {
+      background: rgba(255, 204, 0, 0.15);
+      color: #ffcc00;
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      border: 1px solid rgba(255, 204, 0, 0.3);
+    }
+    
     .verified-badge {
       display: inline-flex;
       align-items: center;
@@ -1264,19 +1297,20 @@
               <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">
                 <i class="fas fa-envelope"></i> Email
               </div>
-              <div></div>
+              <div>support@neobetai.com</div>
             </div>
             <div>
               <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">
                 <i class="fab fa-telegram"></i> Telegram
               </div>
-              <div></div>
+              <div>@neobetai_support</div>
             </div>
             <div>
               <div style="font-weight: 600; color: var(--primary); margin-bottom: 0.5rem;">
                 <i class="fab fa-whatsapp"></i> WhatsApp
               </div>
-              <div>
+              <div>+44 1234 567890</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1432,7 +1466,7 @@
       trackEvent('social_media_click', { platform: 'instagram' });
     });
 
-    // Function to load predictions from JSON
+    // Function to load predictions from JSON file
     async function loadPredictions() {
       try {
         // Show loading state
@@ -1443,7 +1477,7 @@
         // Track prediction load attempt
         trackEvent('predictions_load_attempt');
         
-        // Fetch the predictions data
+        // Fetch the predictions data from external JSON file
         const response = await fetch('predictions.json');
         if (!response.ok) throw new Error('Network response was not ok');
         
@@ -1502,6 +1536,18 @@
                     <div class="stat-value">${stat.value}</div>
                   </div>
                 `).join('')}
+              </div>
+              
+              <div class="markets-section">
+                <div class="markets-header">
+                  <i class="fas fa-coins"></i>
+                  <span>RECOMMENDED MARKETS</span>
+                </div>
+                <div class="markets-list">
+                  ${prediction.markets.map(market => `
+                    <span class="market-pill">${market}</span>
+                  `).join('')}
+                </div>
               </div>
               
               <div class="verified-badge">
