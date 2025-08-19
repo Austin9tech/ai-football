@@ -1,233 +1,90 @@
 {
-  "lastUpdated": "2025-07-24",
+  "lastUpdated": "2025-08-19",
   "performanceMetrics": {
-    "accuracyRate": "86.9%",
-    "avgROI": "23.2%",
-    "matchesAnalyzed": "5,435",
-    "userSatisfaction": "97.2%"
+    "accuracyRate": "86.1%",
+    "avgROI": "23.9%",
+    "matchesAnalyzed": "5,421",
+    "userSatisfaction": "96.8%"
   },
   "todayPredictions": [
     {
-      "match": "Ostrava vs Legia Warsaw",
-      "league": "Europa League - Qualification",
-      "prediction": "Draw or Away Win",
-      "confidence": 64,
-      "analysis": "Ostrava has struggled against high-pressure teams. Legia’s attacking model suggests advantage in transitions. Nash equilibrium leans toward Legia’s counter-style play.",
+      "match": "Nigeria vs Congo",
+      "league": "AFRICAN NATIONS CHAMPIONSHIP",
+      "prediction": "Home Win",
+      "confidence": 72,
+      "analysis": "Nigeria strong home record in CHAN competitions. Congo struggle away, with low scoring threat. Nigeria likely to control possession and chances.",
       "stats": [
-        { "label": "Ostrava Home Win %", "value": "43%" },
-        { "label": "Legia Away Win %", "value": "52%" },
-        { "label": "Expected Goals Edge", "value": "Legia +0.4" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    },
-    {
-      "match": "Sheriff Tiraspol vs Utrecht",
-      "league": "Europa League - Qualification",
-      "prediction": "Away Win",
-      "confidence": 69,
-      "analysis": "Utrecht’s possession-based structure forces Sheriff into low-blocks, where they concede more. Nash model favors dominant strategy by Utrecht.",
-      "stats": [
-        { "label": "Sheriff xGA vs Pressing Teams", "value": "1.9" },
-        { "label": "Utrecht Avg Possession", "value": "61%" },
-        { "label": "Sheriff Win Rate vs Dutch Clubs", "value": "20%" },
+        { "label": "Nigeria Home Win %", "value": "68%" },
+        { "label": "Congo Away Loss %", "value": "55%" },
+        { "label": "H2H Home Wins", "value": "3/4" },
         { "label": "AI Success Rate", "value": "74%" }
       ]
     },
     {
-      "match": "Levski Sofia vs Braga",
-      "league": "Europa League - Qualification",
-      "prediction": "Away Win",
-      "confidence": 75,
-      "analysis": "Braga’s tactical flexibility overcomes Levski’s narrow midfield. Nash strategy shows a dominant win route via wide overloads.",
-      "stats": [
-        { "label": "Braga European Win %", "value": "68%" },
-        { "label": "Levski Defensive Errors/Game", "value": "1.3" },
-        { "label": "H2H Record", "value": "First Meeting" },
-        { "label": "AI Success Rate", "value": "78%" }
-      ]
-    },
-    {
-      "match": "Midtjylland vs Hibernian",
-      "league": "Europa League - Qualification",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 72,
-      "analysis": "Both sides favor vertical, attacking transitions. Nash equilibrium suggests mutual risk-taking.",
-      "stats": [
-        { "label": "Midtjylland Home Goals/Game", "value": "2.3" },
-        { "label": "Hibernian Away Goals/Game", "value": "1.8" },
-        { "label": "H2H Over 2.5", "value": "2/2" },
-        { "label": "AI Success Rate", "value": "75%" }
-      ]
-    },
-    {
-      "match": "Anderlecht vs Hacken",
-      "league": "Europa League - Qualification",
-      "prediction": "Home Win",
-      "confidence": 71,
-      "analysis": "Anderlecht’s pressing and possession trap strategy pins Hacken deep. Nash game flow shows home dominance.",
-      "stats": [
-        { "label": "Anderlecht Home Win %", "value": "77%" },
-        { "label": "Hacken Away Loss %", "value": "48%" },
-        { "label": "H2H Record", "value": "N/A" },
-        { "label": "AI Success Rate", "value": "73%" }
-      ]
-    },
-    {
-      "match": "Atletic Escaldes vs Dinamo Tirana",
-      "league": "Conference League - Qualification",
-      "prediction": "Away Win",
-      "confidence": 66,
-      "analysis": "Dinamo holds higher squad market value, better pass success rate. Nash dynamics tilt advantage away.",
-      "stats": [
-        { "label": "Escaldes Home Draw %", "value": "30%" },
-        { "label": "Dinamo Tirana Win Rate vs Weaker Sides", "value": "65%" },
-        { "label": "Expected Goals (xG)", "value": "Escaldes 0.8 - Tirana 1.9" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "Vietnam U23 vs Philippines U23",
-      "league": "ASEAN U23 Championship",
-      "prediction": "Home Win & Over 2.5",
-      "confidence": 73,
-      "analysis": "Vietnam dominate in tactical structure and average team strength. Nash payoff matrix shows zero-risk win strategy.",
-      "stats": [
-        { "label": "Vietnam U23 Scoring Avg", "value": "2.4" },
-        { "label": "Philippines U23 Conceding Avg", "value": "2.1" },
-        { "label": "Last H2H", "value": "Vietnam 4-1 Philippines" },
-        { "label": "AI Success Rate", "value": "80%" }
-      ]
-    },
-    {
-      "match": "Chile W vs Uruguay W",
-      "league": "Copa América Women",
+      "match": "Sudan vs Senegal",
+      "league": "AFRICAN NATIONS CHAMPIONSHIP",
       "prediction": "Under 2.5 Goals",
-      "confidence": 67,
-      "analysis": "Both teams adopt conservative setups. Nash game simulation yields a stable equilibrium at low score.",
+      "confidence": 66,
+      "analysis": "Both sides known for tight, low-scoring CHAN games. Sudan defensively strong at home, Senegal usually cautious in away qualifiers.",
       "stats": [
-        { "label": "Chile W Avg Goals/Game", "value": "1.2" },
-        { "label": "Uruguay W Avg Goals/Game", "value": "0.9" },
-        { "label": "BTTS in Last 5", "value": "2/5" },
-        { "label": "AI Success Rate", "value": "70%" }
-      ]
-    },
-    {
-      "match": "Ghana W vs South Africa W",
-      "league": "AFCON Women",
-      "prediction": "Both Teams To Score",
-      "confidence": 68,
-      "analysis": "High-stakes match; both teams expected to press for early goals. Nash mixed strategy supports mutual scoring.",
-      "stats": [
-        { "label": "Ghana W BTTS Rate", "value": "62%" },
-        { "label": "South Africa W BTTS Rate", "value": "67%" },
-        { "label": "H2H BTTS", "value": "4/6" },
-        { "label": "AI Success Rate", "value": "72%" }
+        { "label": "Sudan Home U2.5", "value": "65%" },
+        { "label": "Senegal Away U2.5", "value": "60%" },
+        { "label": "H2H Under 2.5", "value": "3/4" },
+        { "label": "AI Success Rate", "value": "69%" }
       ]
     }
   ],
   "tomorrowPredictions": [
     {
-      "match": "Indonesia U23 vs Thailand U23",
-      "league": "ASEAN Championship U23 - Play Offs",
+      "match": "Basel vs FC Copenhagen",
+      "league": "UEFA CHAMPIONS LEAGUE QUALIFIERS",
+      "prediction": "Both Teams To Score",
+      "confidence": 70,
+      "analysis": "Basel score regularly at home but concede often. Copenhagen strong attack but leaky defense in away games. High chance both sides score.",
+      "stats": [
+        { "label": "Basel Home BTTS", "value": "71%" },
+        { "label": "Copenhagen Away BTTS", "value": "68%" },
+        { "label": "H2H BTTS", "value": "3/4" },
+        { "label": "AI Success Rate", "value": "73%" }
+      ]
+    },
+    {
+      "match": "Bodo/Glimt vs Sturm Graz",
+      "league": "UEFA CHAMPIONS LEAGUE QUALIFIERS",
+      "prediction": "Home Win",
+      "confidence": 69,
+      "analysis": "Bodo/Glimt very strong at home in European qualifiers. Sturm Graz solid side but weaker on travels. Norwegian side favored for narrow win.",
+      "stats": [
+        { "label": "Bodo Home Win %", "value": "72%" },
+        { "label": "Sturm Graz Away Loss %", "value": "42%" },
+        { "label": "H2H Home Wins", "value": "2/2" },
+        { "label": "AI Success Rate", "value": "71%" }
+      ]
+    },
+    {
+      "match": "Celtic vs Kairat Almaty",
+      "league": "UEFA CHAMPIONS LEAGUE QUALIFIERS",
+      "prediction": "Home Win -1.5",
+      "confidence": 74,
+      "analysis": "Celtic dominant at home in qualifiers, high scoring potential. Kairat weak away against top European sides. Expect comfortable Celtic win.",
+      "stats": [
+        { "label": "Celtic Home Win %", "value": "78%" },
+        { "label": "Kairat Away Loss %", "value": "60%" },
+        { "label": "H2H Celtic Wins", "value": "2/3" },
+        { "label": "AI Success Rate", "value": "77%" }
+      ]
+    },
+    {
+      "match": "Fenerbahce vs Benfica",
+      "league": "UEFA CHAMPIONS LEAGUE QUALIFIERS",
       "prediction": "Over 2.5 Goals",
       "confidence": 71,
-      "analysis": "Both teams average 2+ goals per game. Nash model suggests a dominant payoff in offensive gameplay due to equal threat and weak defenses.",
+      "analysis": "Both teams possess attacking firepower. Last 4 meetings produced goals. Fenerbahce strong at home but Benfica deadly counterattacking threat.",
       "stats": [
-        { "label": "Indonesia U23 Avg Goals/Game", "value": "2.3" },
-        { "label": "Thailand U23 Avg Goals/Game", "value": "2.1" },
-        { "label": "BTTS in Last 4", "value": "3/4" },
-        { "label": "AI Success Rate", "value": "76%" }
-      ]
-    },
-    {
-      "match": "Ecuador W vs Argentina W",
-      "league": "Copa América Women",
-      "prediction": "Draw or Away Win",
-      "confidence": 63,
-      "analysis": "Argentina W have more structure and pass control. Nash equilibrium pushes toward Argentina’s consistency in wide area exploit.",
-      "stats": [
-        { "label": "Ecuador W Loss Rate", "value": "58%" },
-        { "label": "Argentina W Avg Possession", "value": "59%" },
-        { "label": "Last 3 H2H", "value": "1 Win, 2 Draws for Argentina" },
-        { "label": "AI Success Rate", "value": "69%" }
-      ]
-    },
-    {
-      "match": "Sarmiento Junin vs Lanus",
-      "league": "Torneo Betano - Clausura",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 70,
-      "analysis": "Both teams rank low in goals scored. Nash outcome based on dominant defensive postures.",
-      "stats": [
-        { "label": "Sarmiento Home Under 2.5", "value": "66%" },
-        { "label": "Lanus Away Under 2.5", "value": "72%" },
-        { "label": "Avg xG (Combined)", "value": "1.9" },
-        { "label": "AI Success Rate", "value": "74%" }
-      ]
-    },
-    {
-      "match": "Kimberley vs Olimpo Bahia Blanca",
-      "league": "Torneo Federal - Winners Stage",
-      "prediction": "Away Win or Draw",
-      "confidence": 62,
-      "analysis": "Olimpo’s record against lower-ranked teams and set-piece dominance shows positive equilibrium outcome.",
-      "stats": [
-        { "label": "Kimberley Home Win %", "value": "40%" },
-        { "label": "Olimpo Away Points/Game", "value": "1.7" },
-        { "label": "Set-Piece Goals", "value": "Olimpo 1.2/game" },
-        { "label": "AI Success Rate", "value": "69%" }
-      ]
-    },
-    {
-      "match": "Manly Utd vs WS Wanderers U23",
-      "league": "Australia - NPL NSW",
-      "prediction": "Both Teams To Score",
-      "confidence": 68,
-      "analysis": "Open-ended matches are common. Nash payoff suggests neither team has defensive dominance.",
-      "stats": [
-        { "label": "Manly BTTS Rate", "value": "73%" },
-        { "label": "WSW U23 BTTS Rate", "value": "69%" },
-        { "label": "Avg Goals/Game", "value": "3.2" },
+        { "label": "Fenerbahce Home Over 2.5", "value": "70%" },
+        { "label": "Benfica Away Over 2.5", "value": "73%" },
+        { "label": "H2H Over 2.5", "value": "4/5" },
         { "label": "AI Success Rate", "value": "75%" }
-      ]
-    },
-    {
-      "match": "Gold Coast Knights vs Olympic FC",
-      "league": "Australia - NPL Queensland",
-      "prediction": "Home Win & Over 2.5",
-      "confidence": 74,
-      "analysis": "Knights’ attack too powerful. Nash equilibrium modeling sees no optimal defense for Olympic FC to counter.",
-      "stats": [
-        { "label": "Gold Coast Home Goals/Game", "value": "2.9" },
-        { "label": "Olympic FC Conceded Avg", "value": "2.1" },
-        { "label": "Home Win %", "value": "82%" },
-        { "label": "AI Success Rate", "value": "78%" }
-      ]
-    },
-    {
-      "match": "New Lambton vs Lambton J.",
-      "league": "Australia - NPL Northern NSW",
-      "prediction": "Over 3.5 Goals",
-      "confidence": 66,
-      "analysis": "Historically high-scoring clashes. Nash model suggests equilibrium is tilted toward offensive reward.",
-      "stats": [
-        { "label": "New Lambton Avg Total Goals", "value": "3.8" },
-        { "label": "Lambton J. Avg Total Goals", "value": "3.5" },
-        { "label": "H2H Over 3.5", "value": "3/4" },
-        { "label": "AI Success Rate", "value": "72%" }
-      ]
-    },
-    {
-      "match": "West Torrens vs Playford Patriots",
-      "league": "Australia - NPL South Australia",
-      "prediction": "Draw",
-      "confidence": 60,
-      "analysis": "Balanced team metrics and equal Nash payoffs yield a likely equilibrium at 1-1 or 0-0.",
-      "stats": [
-        { "label": "West Torrens Draw %", "value": "38%" },
-        { "label": "Playford Patriots Draw %", "value": "40%" },
-        { "label": "Combined xG Difference", "value": "±0.1" },
-        { "label": "AI Success Rate", "value": "68%" }
       ]
     }
   ]
