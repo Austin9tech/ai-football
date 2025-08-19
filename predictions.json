@@ -18,7 +18,8 @@
         { "label": "Congo Away Loss %", "value": "55%" },
         { "label": "H2H Home Wins", "value": "3/4" },
         { "label": "AI Success Rate", "value": "74%" }
-      ]
+      ],
+      "markets": ["1X2: Nigeria Win", "Under 3.5 Goals", "Correct Score 1-0/2-0"]
     },
     {
       "match": "Sudan vs Senegal",
@@ -31,7 +32,8 @@
         { "label": "Senegal Away U2.5", "value": "60%" },
         { "label": "H2H Under 2.5", "value": "3/4" },
         { "label": "AI Success Rate", "value": "69%" }
-      ]
+      ],
+      "markets": ["Under 2.5 Goals", "Draw HT", "Both Teams Not To Score"]
     }
   ],
   "tomorrowPredictions": [
@@ -46,7 +48,8 @@
         { "label": "Copenhagen Away BTTS", "value": "68%" },
         { "label": "H2H BTTS", "value": "3/4" },
         { "label": "AI Success Rate", "value": "73%" }
-      ]
+      ],
+      "markets": ["BTTS: Yes", "Over 2.5 Goals", "Draw or Away Win (X2)"]
     },
     {
       "match": "Bodo/Glimt vs Sturm Graz",
@@ -59,7 +62,8 @@
         { "label": "Sturm Graz Away Loss %", "value": "42%" },
         { "label": "H2H Home Wins", "value": "2/2" },
         { "label": "AI Success Rate", "value": "71%" }
-      ]
+      ],
+      "markets": ["1X2: Bodo/Glimt Win", "Over 1.5 Goals", "Correct Score 2-1"]
     },
     {
       "match": "Celtic vs Kairat Almaty",
@@ -72,7 +76,8 @@
         { "label": "Kairat Away Loss %", "value": "60%" },
         { "label": "H2H Celtic Wins", "value": "2/3" },
         { "label": "AI Success Rate", "value": "77%" }
-      ]
+      ],
+      "markets": ["Celtic -1.5 Handicap", "Over 2.5 Goals", "Correct Score 3-0"]
     },
     {
       "match": "Fenerbahce vs Benfica",
@@ -85,7 +90,8 @@
         { "label": "Benfica Away Over 2.5", "value": "73%" },
         { "label": "H2H Over 2.5", "value": "4/5" },
         { "label": "AI Success Rate", "value": "75%" }
-      ]
+      ],
+      "markets": ["Over 2.5 Goals", "BTTS: Yes", "Correct Score 2-2/1-2"]
     }
   ]
 }
