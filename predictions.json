@@ -1,223 +1,123 @@
 {
-  "lastUpdated": "2025-08-24",
-  "performanceMetrics": {
-    "accuracyRate": "86.3%",
-    "avgROI": "24.2%",
-    "matchesAnalyzed": "5,462",
-    "userSatisfaction": "96.9%"
-  },
-  "todayPredictions": [
-    {
-      "match": "Crystal Palace vs Nottingham Forest",
-      "league": "Premier League",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 68,
-      "analysis": "Both teams favor defensive setups, especially in early-season games. Recent H2H meetings often low-scoring.",
-      "stats": [
-        { "label": "Palace Home U2.5", "value": "62%" },
-        { "label": "Forest Away U2.5", "value": "64%" },
-        { "label": "H2H U2.5", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "70%" }
-      ],
-      "markets": ["Under 2.5 Goals", "Draw HT", "Correct Score 0-0/1-0"]
-    },
-    {
-      "match": "Everton vs Brighton",
-      "league": "Premier League",
-      "prediction": "Away Win or Draw (X2)",
-      "confidence": 72,
-      "analysis": "Brighton more consistent in attack, Everton struggle for creativity. Brighton’s away form strong against mid-lower table sides.",
-      "stats": [
-        { "label": "Everton Home Loss %", "value": "58%" },
-        { "label": "Brighton Away Win %", "value": "63%" },
-        { "label": "H2H Brighton Unbeaten", "value": "3/4" },
-        { "label": "AI Accuracy", "value": "74%" }
-      ],
-      "markets": ["X2 Double Chance", "BTTS: Yes", "Correct Score 1-2"]
-    },
-    {
-      "match": "Fulham vs Manchester United",
-      "league": "Premier League",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 73,
-      "analysis": "United games tend to be open, with defensive gaps. Fulham score at home but concede plenty. High probability of goals.",
-      "stats": [
-        { "label": "Fulham Home Over 2.5", "value": "71%" },
-        { "label": "Man Utd Away Over 2.5", "value": "69%" },
-        { "label": "H2H Over 2.5", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "76%" }
-      ],
-      "markets": ["Over 2.5 Goals", "BTTS: Yes", "Correct Score 1-2/1-3"]
-    },
-    {
-      "match": "Lorient vs Rennes",
-      "league": "Ligue 1",
-      "prediction": "Away Win",
-      "confidence": 70,
-      "analysis": "Rennes stronger squad, European-level side. Lorient lack consistency against top-half teams.",
-      "stats": [
-        { "label": "Lorient Home Loss %", "value": "55%" },
-        { "label": "Rennes Away Win %", "value": "61%" },
-        { "label": "H2H Rennes Wins", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "72%" }
-      ],
-      "markets": ["Rennes Win", "Over 1.5 Goals", "Correct Score 0-2"]
-    },
-    {
-      "match": "Lens vs Le Havre",
-      "league": "Ligue 1",
-      "prediction": "Home Win",
-      "confidence": 74,
-      "analysis": "Lens extremely strong at home. Le Havre rarely get results against top-half Ligue 1 teams.",
-      "stats": [
-        { "label": "Lens Home Win %", "value": "76%" },
-        { "label": "Le Havre Away Loss %", "value": "58%" },
-        { "label": "H2H Lens Wins", "value": "3/3" },
-        { "label": "AI Accuracy", "value": "75%" }
-      ],
-      "markets": ["Lens Win", "Lens -1 Handicap", "Over 2.5 Goals"]
-    },
-    {
-      "match": "Strasbourg vs Nantes",
-      "league": "Ligue 1",
-      "prediction": "Draw",
-      "confidence": 65,
-      "analysis": "Two balanced mid-table sides, very close H2H record. Likely tight contest.",
-      "stats": [
-        { "label": "Strasbourg Home Draw %", "value": "31%" },
-        { "label": "Nantes Away Draw %", "value": "36%" },
-        { "label": "H2H Draws", "value": "3/6" },
-        { "label": "AI Accuracy", "value": "67%" }
-      ],
-      "markets": ["Draw FT", "Under 2.5 Goals", "Correct Score 1-1"]
-    },
-    {
-      "match": "Toulouse vs Brest",
-      "league": "Ligue 1",
-      "prediction": "Both Teams To Score",
-      "confidence": 68,
-      "analysis": "Toulouse strong attacking home record, Brest counterattacking style produces goals. BTTS trends positive.",
-      "stats": [
-        { "label": "Toulouse Home BTTS", "value": "69%" },
-        { "label": "Brest Away BTTS", "value": "66%" },
-        { "label": "H2H BTTS", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "70%" }
-      ],
-      "markets": ["BTTS: Yes", "Over 2.5 Goals", "Correct Score 2-1/1-2"]
-    },
-    {
-      "match": "Lille vs Monaco",
-      "league": "Ligue 1",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 75,
-      "analysis": "Both teams attack-minded. Monaco matches especially goal-heavy, while Lille aggressive at home.",
-      "stats": [
-        { "label": "Lille Home Over 2.5", "value": "68%" },
-        { "label": "Monaco Away Over 2.5", "value": "73%" },
-        { "label": "H2H Over 2.5", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "78%" }
-      ],
-      "markets": ["Over 2.5 Goals", "BTTS: Yes", "Correct Score 2-2"]
-    }
-  ],
-  "tomorrowPredictions": [
-    {
-      "match": "Newcastle vs Liverpool",
-      "league": "Premier League",
-      "prediction": "Over 2.5 Goals",
-      "confidence": 74,
-      "analysis": "Both teams high-intensity attacking football. Newcastle score at home but concede to top-6 sides. Liverpool prolific but shaky defensively.",
-      "stats": [
-        { "label": "Newcastle Home Over 2.5", "value": "72%" },
-        { "label": "Liverpool Away Over 2.5", "value": "74%" },
-        { "label": "H2H Over 2.5", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "76%" }
-      ],
-      "markets": ["Over 2.5 Goals", "BTTS: Yes", "Correct Score 2-2/1-2"]
-    },
-    {
-      "match": "Udinese vs Verona",
-      "league": "Serie A",
-      "prediction": "Draw",
-      "confidence": 64,
-      "analysis": "Two evenly matched teams, both cautious starters to the season. Historically close games between them.",
-      "stats": [
-        { "label": "Udinese Home Draw %", "value": "33%" },
-        { "label": "Verona Away Draw %", "value": "35%" },
-        { "label": "H2H Draws", "value": "3/6" },
-        { "label": "AI Accuracy", "value": "66%" }
-      ],
-      "markets": ["Draw FT", "Under 2.5 Goals", "Correct Score 1-1"]
-    },
-    {
-      "match": "Inter vs Torino",
-      "league": "Serie A",
-      "prediction": "Home Win",
-      "confidence": 76,
-      "analysis": "Inter dominant at San Siro, especially against mid-lower Serie A sides. Torino struggle in Milan.",
-      "stats": [
-        { "label": "Inter Home Win %", "value": "79%" },
-        { "label": "Torino Away Loss %", "value": "57%" },
-        { "label": "H2H Inter Wins", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "78%" }
-      ],
-      "markets": ["Inter Win", "Inter -1 Handicap", "Over 2.5 Goals"]
-    },
-    {
-      "match": "Athletic Bilbao vs Rayo Vallecano",
-      "league": "La Liga",
-      "prediction": "Home Win",
-      "confidence": 70,
-      "analysis": "Bilbao strong at San Mamés, physical advantage over Rayo. Visitors tend to struggle in tough away fixtures.",
-      "stats": [
-        { "label": "Bilbao Home Win %", "value": "69%" },
-        { "label": "Rayo Away Loss %", "value": "54%" },
-        { "label": "H2H Bilbao Wins", "value": "3/4" },
-        { "label": "AI Accuracy", "value": "72%" }
-      ],
-      "markets": ["Bilbao Win", "Over 1.5 Goals", "Correct Score 2-0"]
-    },
-    {
-      "match": "Sevilla vs Getafe",
-      "league": "La Liga",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 71,
-      "analysis": "Getafe defensively disciplined, Sevilla often struggle to break them down. Likely low-scoring battle.",
-      "stats": [
-        { "label": "Sevilla Home U2.5", "value": "63%" },
-        { "label": "Getafe Away U2.5", "value": "70%" },
-        { "label": "H2H U2.5", "value": "5/6" },
-        { "label": "AI Accuracy", "value": "73%" }
-      ],
-      "markets": ["Under 2.5 Goals", "Draw HT", "Correct Score 1-0/1-1"]
-    },
-    {
-      "match": "Independiente vs Platense",
-      "league": "Argentina Clausura",
-      "prediction": "Home Win",
-      "confidence": 67,
-      "analysis": "Independiente typically strong at home in Argentina. Platense inconsistent away from home.",
-      "stats": [
-        { "label": "Independiente Home Win %", "value": "66%" },
-        { "label": "Platense Away Loss %", "value": "58%" },
-        { "label": "H2H Home Wins", "value": "2/3" },
-        { "label": "AI Accuracy", "value": "69%" }
-      ],
-      "markets": ["Independiente Win", "Under 3.5 Goals", "Correct Score 1-0/2-0"]
-    },
-    {
-      "match": "Deportivo Riestra vs Sarmiento Junín",
-      "league": "Argentina Clausura",
-      "prediction": "Under 2.5 Goals",
-      "confidence": 68,
-      "analysis": "Both teams rely on defensive solidity, goals rare in this matchup. Expect tight game.",
-      "stats": [
-        { "label": "Riestra Home U2.5", "value": "70%" },
-        { "label": "Sarmiento Away U2.5", "value": "68%" },
-        { "label": "H2H U2.5", "value": "4/5" },
-        { "label": "AI Accuracy", "value": "71%" }
-      ],
-      "markets": ["Under 2.5 Goals", "Draw FT", "Correct Score 0-0/1-0"]
-    }
-  ]
+  "lastUpdated": "2025-08-25",
+  "predictions": {
+    "2025-08-25": [
+      {
+        "match": "Crystal Palace vs Nottingham Forest",
+        "league": "Premier League",
+        "prediction": "Under 2.5 Goals",
+        "confidence": 68,
+        "analysis": "Both teams favor defensive setups, especially in early-season games. Recent H2H meetings often low-scoring.",
+        "stats": [
+          { "label": "Palace Home U2.5", "value": "62%" },
+          { "label": "Forest Away U2.5", "value": "64%" },
+          { "label": "H2H U2.5", "value": "4/5" },
+          { "label": "AI Accuracy", "value": "70%" }
+        ],
+        "markets": ["Under 2.5 Goals", "Draw HT", "Correct Score 0-0/1-0"]
+      },
+      {
+        "match": "Fulham vs Manchester United",
+        "league": "Premier League",
+        "prediction": "Over 2.5 Goals",
+        "confidence": 73,
+        "analysis": "United games tend to be open, with defensive gaps. Fulham score at home but concede plenty. High probability of goals.",
+        "stats": [
+          { "label": "Fulham Home Over 2.5", "value": "71%" },
+          { "label": "Man Utd Away Over 2.5", "value": "69%" },
+          { "label": "H2H Over 2.5", "value": "4/5" },
+          { "label": "AI Accuracy", "value": "76%" }
+        ],
+        "markets": ["Over 2.5 Goals", "BTTS: Yes", "Correct Score 1-2/1-3"]
+      },
+      {
+        "match": "Lorient vs Rennes",
+        "league": "Ligue 1",
+        "prediction": "Away Win",
+        "confidence": 70,
+        "analysis": "Rennes stronger squad, European-level side. Lorient lack consistency against top-half teams.",
+        "stats": [
+          { "label": "Lorient Home Loss %", "value": "55%" },
+          { "label": "Rennes Away Win %", "value": "61%" },
+          { "label": "H2H Rennes Wins", "value": "4/5" },
+          { "label": "AI Accuracy", "value": "72%" }
+        ],
+        "markets": ["Rennes Win", "Over 1.5 Goals", "Correct Score 0-2"]
+      }
+    ],
+    "2025-08-26": [
+      {
+        "match": "Newcastle vs Liverpool",
+        "league": "Premier League",
+        "prediction": "Over 2.5 Goals",
+        "confidence": 74,
+        "analysis": "Both teams high-intensity attacking football. Newcastle score at home but concede to top-6 sides. Liverpool prolific but shaky defensively.",
+        "stats": [
+          { "label": "Newcastle Home Over 2.5", "value": "72%" },
+          { "label": "Liverpool Away Over 2.5", "value": "74%" },
+          { "label": "H2H Over 2.5", "value": "4/5" },
+          { "label": "AI Accuracy", "value": "76%" }
+        ],
+        "markets": ["Over 2.5 Goals", "BTTS: Yes", "Correct Score 2-2/1-2"]
+      },
+      {
+        "match": "Inter vs Torino",
+        "league": "Serie A",
+        "prediction": "Home Win",
+        "confidence": 76,
+        "analysis": "Inter dominant at San Siro, especially against mid-lower Serie A sides. Torino struggle in Milan.",
+        "stats": [
+          { "label": "Inter Home Win %", "value": "79%" },
+          { "label": "Torino Away Loss %", "value": "57%" },
+          { "label": "H2H Inter Wins", "value": "4/5" },
+          { "label": "AI Accuracy", "value": "78%" }
+        ],
+        "markets": ["Inter Win", "Inter -1 Handicap", "Over 2.5 Goals"]
+      },
+      {
+        "match": "Athletic Bilbao vs Rayo Vallecano",
+        "league": "La Liga",
+        "prediction": "Home Win",
+        "confidence": 70,
+        "analysis": "Bilbao strong at San Mamés, physical advantage over Rayo. Visitors tend to struggle in tough away fixtures.",
+        "stats": [
+          { "label": "Bilbao Home Win %", "value": "69%" },
+          { "label": "Rayo Away Loss %", "value": "54%" },
+          { "label": "H2H Bilbao Wins", "value": "3/4" },
+          { "label": "AI Accuracy", "value": "72%" }
+        ],
+        "markets": ["Bilbao Win", "Over 1.5 Goals", "Correct Score 2-0"]
+      }
+    ],
+    "2025-08-27": [
+        {
+          "match": "Real Madrid vs Real Betis",
+          "league": "La Liga",
+          "prediction": "Home Win & Over 2.5",
+          "confidence": 78,
+          "analysis": "Real Madrid possess immense attacking firepower at home. Betis are a capable side but often struggle defensively against elite opposition away.",
+          "stats": [
+            { "label": "Madrid Home Win %", "value": "85%" },
+            { "label": "Betis Away Loss %", "value": "50%" },
+            { "label": "H2H Madrid Wins", "value": "4/5" },
+            { "label": "AI Accuracy", "value": "80%" }
+          ],
+          "markets": ["Real Madrid Win", "Over 2.5 Goals", "Madrid -1.5 Handicap"]
+        },
+        {
+          "match": "Bayern Munich vs RB Leipzig",
+          "league": "Bundesliga",
+          "prediction": "Both Teams To Score",
+          "confidence": 82,
+          "analysis": "A classic high-scoring fixture in Germany. Both teams have potent attacks and a philosophy of playing on the front foot. Defensive frailties are common in this matchup.",
+          "stats": [
+            { "label": "Bayern Home BTTS", "value": "75%" },
+            { "label": "Leipzig Away BTTS", "value": "78%" },
+            { "label": "H2H BTTS", "value": "5/5" },
+            { "label": "AI Accuracy", "value": "85%" }
+          ],
+          "markets": ["BTTS: Yes", "Over 3.5 Goals", "Draw"]
+        }
+    ]
+  }
 }

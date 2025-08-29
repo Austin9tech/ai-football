@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEOBET AI | Terms of Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050509'/><path d='M50 20L30 50L50 80L70 50Z' fill='%2300ff88'/></svg>">
+    
+    <style>
+        :root {
+            --primary: #00ff88;
+            --secondary: #00b3ff;
+            --dark: #0a0a12;
+            --darker: #050509;
+            --light: #f0f0f0;
+            --card-bg: rgba(15, 15, 25, 0.9);
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 50% 100%, rgba(0, 179, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 50% 0%, rgba(0, 255, 136, 0.1) 0%, transparent 40%);
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: linear-gradient(135deg, var(--darker) 0%, rgba(10, 20, 30, 0.95) 100%);
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        
+        .logo {
+            display: flex; align-items: center; gap: 12px;
+            font-size: clamp(1.2rem, 4vw, 1.5rem); font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+            text-decoration: none;
+        }
+        
+        .logo-icon { font-size: clamp(1.5rem, 4vw, 1.8rem); }
+        .main-nav { display: none; }
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links a { color: var(--light); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .mobile-menu-toggle { display: block; background: none; border: none; color: var(--light); font-size: 1.5rem; cursor: pointer; }
+
+        /* --- Main Content --- */
+        main { padding: 2rem 1rem; max-width: 900px; margin: 0 auto; }
+        .page-header { text-align: center; margin-bottom: 3rem; }
+        .page-title { font-size: clamp(2rem, 5vw, 2.8rem); color: var(--primary); }
+        .page-subtitle { font-size: clamp(1rem, 3vw, 1.2rem); color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 0.5rem auto 0; }
+        
+        .terms-content {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .terms-content h2 {
+            font-size: 1.6rem;
+            color: var(--secondary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .terms-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .terms-content p, .terms-content li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 1rem;
+        }
+
+        .terms-content ul {
+            padding-left: 20px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--darker); padding: 2rem 1rem; text-align: center;
+            font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 3rem;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin: 1.5rem 0; flex-wrap: wrap; }
+        .footer-link { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.3s ease; }
+        .footer-link:hover { color: var(--primary); }
+        .disclaimer { max-width: 700px; margin: 1rem auto 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); }
+        
+        /* --- Responsive --- */
+        @media (min-width: 769px) {
+            .mobile-menu-toggle { display: none; }
+            .main-nav { display: block; }
+        }
+        @media (max-width: 768px) {
+            .main-nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--darker); padding: 1rem; }
+            .main-nav.active { display: block; }
+            .nav-links { flex-direction: column; align-items: center; gap: 1rem; }
+            .terms-content { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo"><i class="fas fa-robot logo-icon"></i><span>NEOBET AI</span></a>
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">Terms of Service</h1>
+            <p class="page-subtitle">Please read these terms carefully before using our service. Last Updated: August 25, 2025.</p>
+        </div>
+        <div class="terms-content">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using the NEOBET AI website ("Service"), you agree to be bound by these Terms of Service. If you disagree with any part of the terms, you may not access the Service.</p>
+            
+            <h2>2. Service Description</h2>
+            <p>NEOBET AI provides football predictions generated by artificial intelligence for informational purposes only. Our content does not constitute financial or gambling advice. All betting decisions are made at your own risk.</p>
+            
+            <h2>3. User Responsibilities</h2>
+            <ul>
+                <li>You must be at least 18 years of age or the legal gambling age in your jurisdiction.</li>
+                <li>You agree to use our Service for personal, non-commercial purposes only.</li>
+                <li>You acknowledge that gambling involves risk and you are solely responsible for managing your own funds and betting responsibly.</li>
+            </ul>
+            
+            <h2>4. No Guarantees of Winnings</h2>
+            <p>While our AI is designed for high accuracy, we do not and cannot guarantee the outcome of any sporting event. Past performance is not an indicator of future results. NEOBET AI is not liable for any financial losses incurred from using our predictions.</p>
+            
+            <h2>5. Intellectual Property</h2>
+            <p>All content on this website, including predictions, data, text, and design, is the exclusive property of NEOBET AI. Unauthorized reproduction or distribution is strictly prohibited.</p>
+            
+            <h2>6. Limitation of Liability</h2>
+            <p>In no event shall NEOBET AI, nor its directors or employees, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, or other intangible losses, resulting from your access to or use of the Service.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="home.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="terms.html" class="footer-link">Terms of Service</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="disclaimer">
+            Disclaimer: Sports betting involves risk. Bet responsibly. Must be 18+.
+        </div>
+        <div>&copy; <span id="year"></span> NEOBET AI Technologies. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+        if(mobileMenuToggle && mainNav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+        document.getElementById('year').textContent = new Date().getFullYear();
+    });
+    </script>
+</body>
+</html>

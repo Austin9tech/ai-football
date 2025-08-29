@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEOBET AI | How It Works</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050509'/><path d='M50 20L30 50L50 80L70 50Z' fill='%2300ff88'/></svg>">
+    
+    <style>
+        :root {
+            --primary: #00ff88;
+            --secondary: #00b3ff;
+            --dark: #0a0a12;
+            --darker: #050509;
+            --light: #f0f0f0;
+            --card-bg: rgba(15, 15, 25, 0.9);
+        }
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Segoe UI', 'Roboto', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.7;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(0, 179, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(0, 255, 136, 0.15) 0%, transparent 40%);
+        }
+
+        /* --- Header & Navigation (Consistent across pages) --- */
+        header {
+            background: linear-gradient(135deg, var(--darker) 0%, rgba(10, 20, 30, 0.95) 100%);
+            padding: 1rem;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        
+        .logo {
+            display: flex; align-items: center; gap: 12px;
+            font-size: clamp(1.2rem, 4vw, 1.5rem); font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+            text-decoration: none;
+        }
+        
+        .logo-icon { font-size: clamp(1.5rem, 4vw, 1.8rem); }
+        .main-nav { display: none; }
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links a { color: var(--light); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+        .mobile-menu-toggle { display: block; background: none; border: none; color: var(--light); font-size: 1.5rem; cursor: pointer; }
+
+        /* --- Main Content --- */
+        main { padding: 2rem 1rem; max-width: 900px; margin: 0 auto; }
+        .page-header { text-align: center; margin-bottom: 3rem; }
+        .page-title { font-size: clamp(2rem, 5vw, 2.8rem); color: var(--primary); }
+        .page-subtitle { font-size: clamp(1rem, 3vw, 1.2rem); color: rgba(255, 255, 255, 0.7); max-width: 700px; margin: 0.5rem auto 0; }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            height: 100%;
+            width: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 70px;
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--darker);
+            border: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            z-index: 1;
+        }
+
+        .timeline-content {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            color: var(--light);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--darker); padding: 2rem 1rem; text-align: center;
+            font-size: 0.9rem; color: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1); margin-top: 3rem;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin: 1.5rem 0; flex-wrap: wrap; }
+        .footer-link { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.3s ease; }
+        .footer-link:hover { color: var(--primary); }
+        .disclaimer { max-width: 700px; margin: 1rem auto 0; font-size: 0.8rem; color: rgba(255, 255, 255, 0.4); }
+
+        /* --- Responsive --- */
+        @media (min-width: 769px) {
+            .mobile-menu-toggle { display: none; }
+            .main-nav { display: block; }
+        }
+        @media (max-width: 768px) {
+            .main-nav { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: var(--darker); padding: 1rem; }
+            .main-nav.active { display: block; }
+            .nav-links { flex-direction: column; align-items: center; gap: 1rem; }
+            .timeline::before { left: 20px; }
+            .timeline-item { padding-left: 50px; }
+            .timeline-icon { left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html" class="logo"><i class="fas fa-robot logo-icon"></i><span>NEOBET AI</span></a>
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="how-it-works.html" class="active">How It Works</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">Our Process</h1>
+            <p class="page-subtitle">From raw data to refined predictions, our 4-stage process ensures the highest quality insights for every match.</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-database"></i></div>
+                <div class="timeline-content">
+                    <h3>Step 1: Data Aggregation</h3>
+                    <p>We continuously gather vast amounts of data from over 40 global sources. This includes everything from basic match stats to advanced metrics like player positioning, team momentum, and even weather patterns. This forms the raw foundation for our analysis.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-brain"></i></div>
+                <div class="timeline-content">
+                    <h3>Step 2: Quantum AI Processing</h3>
+                    <p>Our Quantum Neural Network gets to work, sifting through the data to find hidden patterns and correlations that human analysts could never spot. It runs over 10,000 simulations for each match, calculating the probability of every conceivable outcome.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-lightbulb"></i></div>
+                <div class="timeline-content">
+                    <h3>Step 3: Prediction Generation</h3>
+                    <p>The AI generates its primary predictions, assigning a confidence score to each. This score represents the AI's certainty in the outcome based on its simulations. We focus on various markets, including match winner, goals, and more, to find the best value.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-user-check"></i></div>
+                <div class="timeline-content">
+                    <h3>Step 4: Human Expert Verification</h3>
+                    <p>Technology is powerful, but context is key. Before any prediction is published, our team of experienced sports traders reviews it. They add a layer of human expertise, considering factors like team news or market sentiment that might influence the outcome. Only predictions that pass this final check are released.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="home.html" class="footer-link">Home</a>
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="terms.html" class="footer-link">Terms of Service</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+        <div class="disclaimer">
+            Disclaimer: Sports betting involves risk. Bet responsibly. Must be 18+.
+        </div>
+        <div>&copy; <span id="year"></span> NEOBET AI Technologies. All Rights Reserved.</div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+        if(mobileMenuToggle && mainNav) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+        document.getElementById('year').textContent = new Date().getFullYear();
+    });
+    </script>
+</body>
+</html>
