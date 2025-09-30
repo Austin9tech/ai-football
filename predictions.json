@@ -1,371 +1,134 @@
 {
-"lastUpdated": "2025-09-27",
-"predictions": {
-"2025-09-27": [
-{
-"match": "Brentford vs Manchester Utd",
-"league": "Premier League",
-"prediction": "Away Win",
-"confidence": 66,
-"analysis": "Man Utd show greater squad depth and clinical finishing; Brentford solid at home but struggle against top-six sides. Nash view: United likely to push for winning equilibrium by controlling tempo.",
-"stats": [
-{ "label": "Brentford Home Win %", "value": "28%" },
-{ "label": "Man Utd Away Win %", "value": "45%" },
-{ "label": "H2H Man Utd Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "72%" }
-],
-"markets": ["Man Utd Win", "BTTS: Yes", "Correct Score 1-2/0-2"]
-},
-{
-"match": "Chelsea vs Brighton",
-"league": "Premier League",
-"prediction": "Draw",
-"confidence": 62,
-"analysis": "Tight tactical battle expected; Chelsea still finding consistency. Brighton effective on the break. Nash: both sides may prefer cautious equilibrium to avoid defensive exposure.",
-"stats": [
-{ "label": "Chelsea Home Draw %", "value": "33%" },
-{ "label": "Brighton Away Draw %", "value": "30%" },
-{ "label": "H2H Draws", "value": "2/5" },
-{ "label": "AI Accuracy", "value": "70%" }
-],
-"markets": ["Draw", "Under 2.5 Goals", "Correct Score 1-1/0-0"]
-},
-{
-"match": "Crystal Palace vs Liverpool",
-"league": "Premier League",
-"prediction": "Away Win",
-"confidence": 71,
-"analysis": "Liverpool's attack and rotation advantage should break Palace's structure. Palace defend well at Selhurst but have struggled vs elite attackers.",
-"stats": [
-{ "label": "Palace Home Loss %", "value": "42%" },
-{ "label": "Liverpool Away Win %", "value": "58%" },
-{ "label": "H2H Liverpool Wins", "value": "4/5" },
-{ "label": "AI Accuracy", "value": "76%" }
-],
-"markets": ["Liverpool Win", "Over 1.5 Goals", "Correct Score 1-2/0-2"]
-},
-{
-"match": "Leeds vs Bournemouth",
-"league": "Premier League",
-"prediction": "Home Win",
-"confidence": 63,
-"analysis": "Leeds proactive at home and should exploit Bournemouth's defensive lapses. Nash: home side drives aggressive strategy to force openings.",
-"stats": [
-{ "label": "Leeds Home Win %", "value": "48%" },
-{ "label": "Bournemouth Away Loss %", "value": "44%" },
-{ "label": "H2H Leeds Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "69%" }
-],
-"markets": ["Leeds Win", "Over 1.5 Goals", "Correct Score 2-1/1-0"]
-},
-{
-"match": "Manchester City vs Burnley",
-"league": "Premier League",
-"prediction": "Home Win & Over 2.5",
-"confidence": 84,
-"analysis": "City dominant at home with heavy possession and chance creation; Burnley set up defensively but likely to concede against sustained pressure.",
-"stats": [
-{ "label": "Man City Home Win %", "value": "87%" },
-{ "label": "Burnley Away Loss %", "value": "65%" },
-{ "label": "H2H City Wins", "value": "5/5" },
-{ "label": "AI Accuracy", "value": "82%" }
-],
-"markets": ["Man City Win", "Over 2.5 Goals", "City -1.5 Handicap"]
-},
-{
-"match": "Nottingham vs Sunderland",
-"league": "Premier League",
-"prediction": "Home Win",
-"confidence": 60,
-"analysis": "Nottingham's home form gives them slight edge; Sunderland organized but may lack cutting edge on the road.",
-"stats": [
-{ "label": "Nottingham Home Win %", "value": "39%" },
-{ "label": "Sunderland Away Win %", "value": "32%" },
-{ "label": "H2H Home Favours", "value": "2/4" },
-{ "label": "AI Accuracy", "value": "68%" }
-],
-"markets": ["Nottingham Win", "Under 3.5 Goals", "Correct Score 1-0/2-1"]
-},
-{
-"match": "Tottenham vs Wolves",
-"league": "Premier League",
-"prediction": "Home Win",
-"confidence": 69,
-"analysis": "Tottenham attacking quality and home advantage should be decisive; Wolves counter well but vulnerable to sustained pressure.",
-"stats": [
-{ "label": "Tottenham Home Win %", "value": "62%" },
-{ "label": "Wolves Away Loss %", "value": "46%" },
-{ "label": "H2H Spurs Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "74%" }
-],
-"markets": ["Tottenham Win", "Over 1.5 Goals", "Correct Score 2-1/2-0"]
-},
-{
-"match": "Como vs Cremonese",
-"league": "Italy: Serie A",
-"prediction": "Draw",
-"confidence": 61,
-"analysis": "Evenly matched small-side fixture; both sides conservative with emphasis on defensive structure. Nash: draw is a stable, risk-averse equilibrium.",
-"stats": [
-{ "label": "Como Home Draw %", "value": "34%" },
-{ "label": "Cremonese Away Draw %", "value": "32%" },
-{ "label": "H2H Limited", "value": "0/2" },
-{ "label": "AI Accuracy", "value": "67%" }
-],
-"markets": ["Draw", "Under 2.5 Goals", "Correct Score 1-1/0-0"]
-},
-{
-"match": "Juventus vs Atalanta",
-"league": "Italy: Serie A",
-"prediction": "Home Win",
-"confidence": 72,
-"analysis": "Juventus stronger in squad depth and home advantage; Atalanta attack is potent but concedes. Nash: Juventus likely to control midfield to limit Atalanta transitions.",
-"stats": [
-{ "label": "Juventus Home Win %", "value": "66%" },
-{ "label": "Atalanta Away Win %", "value": "38%" },
-{ "label": "H2H Juventus Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "75%" }
-],
-"markets": ["Juventus Win", "Over 1.5 Goals", "Correct Score 2-1/2-0"]
-},
-{
-"match": "Cagliari vs Inter",
-"league": "Italy: Serie A",
-"prediction": "Away Win",
-"confidence": 78,
-"analysis": "Inter significantly stronger; Cagliari struggle defensively against top teams. Nash: Inter can force an attacking equilibrium to exploit gaps.",
-"stats": [
-{ "label": "Cagliari Home Loss %", "value": "58%" },
-{ "label": "Inter Away Win %", "value": "72%" },
-{ "label": "H2H Inter Wins", "value": "4/5" },
-{ "label": "AI Accuracy", "value": "79%" }
-],
-"markets": ["Inter Win", "Inter -1 Handicap", "Over 1.5 Goals"]
-},
-{
-"match": "Lorient vs Monaco",
-"league": "France: Ligue 1",
-"prediction": "Away Win",
-"confidence": 69,
-"analysis": "Monaco superior in quality and chance creation; Lorient competitive at home but inconsistent vs top-half sides.",
-"stats": [
-{ "label": "Lorient Home Loss %", "value": "46%" },
-{ "label": "Monaco Away Win %", "value": "53%" },
-{ "label": "H2H Monaco Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "73%" }
-],
-"markets": ["Monaco Win", "Over 1.5 Goals", "Correct Score 1-2"]
-},
-{
-"match": "Toulouse vs Nantes",
-"league": "France: Ligue 1",
-"prediction": "Draw",
-"confidence": 60,
-"analysis": "Close mid-table clash; both sides prefer structured play and often split points. Nash: cautious strategies lead to equilibrium draw.",
-"stats": [
-{ "label": "Toulouse Home Draw %", "value": "31%" },
-{ "label": "Nantes Away Draw %", "value": "30%" },
-{ "label": "H2H Draws", "value": "2/4" },
-{ "label": "AI Accuracy", "value": "68%" }
-],
-"markets": ["Draw", "Under 2.5 Goals", "Correct Score 1-1"]
-},
-{
-"match": "PSG vs Auxerre",
-"league": "France: Ligue 1",
-"prediction": "Home Win & Over 2.5",
-"confidence": 80,
-"analysis": "PSG overwhelming quality and attack; Auxerre likely to sit deep, but PSG should break them down and score multiple goals.",
-"stats": [
-{ "label": "PSG Home Win %", "value": "84%" },
-{ "label": "Auxerre Away Loss %", "value": "62%" },
-{ "label": "H2H PSG Wins", "value": "5/5" },
-{ "label": "AI Accuracy", "value": "81%" }
-],
-"markets": ["PSG Win", "Over 2.5 Goals", "PSG -1.5 Handicap"]
-},
-{
-"match": "Heidenheim vs Augsburg",
-"league": "Germany: Bundesliga",
-"prediction": "Draw",
-"confidence": 59,
-"analysis": "Evenly matched Bundesliga fixture; both prioritize organization and may cancel each other out. Nash: draw likely stable choice for both.",
-"stats": [
-{ "label": "Heidenheim Home Draw %", "value": "29%" },
-{ "label": "Augsburg Away Draw %", "value": "31%" },
-{ "label": "H2H Limited", "value": "1/3" },
-{ "label": "AI Accuracy", "value": "67%" }
-],
-"markets": ["Draw", "Under 3.5 Goals", "Correct Score 1-1/0-0"]
-},
-{
-"match": "Mainz vs Dortmund",
-"league": "Germany: Bundesliga",
-"prediction": "Away Win",
-"confidence": 72,
-"analysis": "Dortmund superior attacking talent and transitional speed; Mainz strong at home but vulnerable to quick counters.",
-"stats": [
-{ "label": "Mainz Home Loss %", "value": "40%" },
-{ "label": "Dortmund Away Win %", "value": "59%" },
-{ "label": "H2H Dortmund Wins", "value": "3/4" },
-{ "label": "AI Accuracy", "value": "75%" }
-],
-"markets": ["Dortmund Win", "BTTS: Yes", "Correct Score 1-2/0-2"]
-},
-{
-"match": "St. Pauli vs Bayer Leverkusen",
-"league": "Germany: Bundesliga",
-"prediction": "Away Win",
-"confidence": 74,
-"analysis": "Leverkusen stronger squad and attacking depth; St. Pauli resilient but often overwhelmed by top teams.",
-"stats": [
-{ "label": "St. Pauli Home Loss %", "value": "50%" },
-{ "label": "Leverkusen Away Win %", "value": "66%" },
-{ "label": "H2H Leverkusen Wins", "value": "4/5" },
-{ "label": "AI Accuracy", "value": "77%" }
-],
-"markets": ["Leverkusen Win", "Over 2.5 Goals", "Leverkusen -1 Handicap"]
-},
-{
-"match": "Wolfsburg vs RB Leipzig",
-"league": "Germany: Bundesliga",
-"prediction": "Away Win",
-"confidence": 70,
-"analysis": "Leipzig stronger tactically on the road and efficient in attack; Wolfsburg competitive but inconsistent.",
-"stats": [
-{ "label": "Wolfsburg Home Win %", "value": "44%" },
-{ "label": "Leipzig Away Win %", "value": "58%" },
-{ "label": "H2H Leipzig Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "73%" }
-],
-"markets": ["Leipzig Win", "Over 1.5 Goals", "Correct Score 1-2"]
-},
-{
-"match": "B. Monchengladbach vs Eintracht Frankfurt",
-"league": "Germany: Bundesliga",
-"prediction": "Draw",
-"confidence": 61,
-"analysis": "Tight matchup with both teams capable of scoring but also likely to neutralize each other in midfield. Nash: draw a likely compromise equilibrium.",
-"stats": [
-{ "label": "Gladbach Home Draw %", "value": "33%" },
-{ "label": "Frankfurt Away Draw %", "value": "29%" },
-{ "label": "H2H Draws", "value": "2/5" },
-{ "label": "AI Accuracy", "value": "69%" }
-],
-"markets": ["Draw", "BTTS: Yes", "Correct Score 1-1"]
-},
-{
-"match": "Ajax vs NAC Breda",
-"league": "Netherlands: Eredivisie",
-"prediction": "Home Win & Over 2.5",
-"confidence": 79,
-"analysis": "Ajax far superior domestically, create numerous chances and should score multiple at home against Breda.",
-"stats": [
-{ "label": "Ajax Home Win %", "value": "80%" },
-{ "label": "NAC Away Loss %", "value": "68%" },
-{ "label": "H2H Ajax Wins", "value": "4/4" },
-{ "label": "AI Accuracy", "value": "81%" }
-],
-"markets": ["Ajax Win", "Over 2.5 Goals", "Ajax -1.5 Handicap"]
-},
-{
-"match": "FC Volendam vs Zwolle",
-"league": "Netherlands: Eredivisie",
-"prediction": "Draw",
-"confidence": 60,
-"analysis": "Mid-table clash likely to be balanced; both sides pragmatic and tactically cautious.",
-"stats": [
-{ "label": "Volendam Home Draw %", "value": "30%" },
-{ "label": "Zwolle Away Draw %", "value": "31%" },
-{ "label": "H2H Limited", "value": "1/3" },
-{ "label": "AI Accuracy", "value": "67%" }
-],
-"markets": ["Draw", "Under 3.5 Goals", "Correct Score 1-1"]
-},
-{
-"match": "Excelsior vs PSV",
-"league": "Netherlands: Eredivisie",
-"prediction": "Away Win",
-"confidence": 72,
-"analysis": "PSV stronger squad and European experience; Excelsior resilient but usually struggle to contain PSV's attack.",
-"stats": [
-{ "label": "Excelsior Home Loss %", "value": "52%" },
-{ "label": "PSV Away Win %", "value": "65%" },
-{ "label": "H2H PSV Wins", "value": "4/5" },
-{ "label": "AI Accuracy", "value": "74%" }
-],
-"markets": ["PSV Win", "Over 1.5 Goals", "Correct Score 1-3"]
-},
-{
-"match": "Heracles vs Sparta Rotterdam",
-"league": "Netherlands: Eredivisie",
-"prediction": "Home Win",
-"confidence": 62,
-"analysis": "Heracles at home have shown consistency; Sparta vulnerable away and susceptible to counterattacks.",
-"stats": [
-{ "label": "Heracles Home Win %", "value": "47%" },
-{ "label": "Sparta Away Loss %", "value": "43%" },
-{ "label": "H2H Heracles Wins", "value": "2/4" },
-{ "label": "AI Accuracy", "value": "70%" }
-],
-"markets": ["Heracles Win", "Under 3.5 Goals", "Correct Score 1-0/2-1"]
-},
-{
-"match": "Getafe vs Levante",
-"league": "Spain: LaLiga",
-"prediction": "Home Win",
-"confidence": 64,
-"analysis": "Getafe defend well at home and are favored vs newly promoted Levante who can struggle away.",
-"stats": [
-{ "label": "Getafe Home Win %", "value": "51%" },
-{ "label": "Levante Away Loss %", "value": "56%" },
-{ "label": "H2H Getafe Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "71%" }
-],
-"markets": ["Getafe Win", "Under 2.5 Goals", "Correct Score 1-0"]
-},
-{
-"match": "Atl. Madrid vs Real Madrid",
-"league": "Spain: LaLiga",
-"prediction": "Away Win",
-"confidence": 70,
-"analysis": "Madrid's attacking firepower and depth give them edge despite Atletico's defensive resilience. Nash: Real likely to push for a decisive attacking equilibrium.",
-"stats": [
-{ "label": "Atletico Home Loss %", "value": "38%" },
-{ "label": "Real Away Win %", "value": "55%" },
-{ "label": "H2H Madrid Wins", "value": "3/5" },
-{ "label": "AI Accuracy", "value": "76%" }
-],
-"markets": ["Real Madrid Win", "Over 1.5 Goals", "Correct Score 1-2/0-2"]
-},
-{
-"match": "Mallorca vs Alaves",
-"league": "Spain: LaLiga",
-"prediction": "Home Win",
-"confidence": 61,
-"analysis": "Mallorca solid at home and usually outperform Alaves who struggle away from home.",
-"stats": [
-{ "label": "Mallorca Home Win %", "value": "49%" },
-{ "label": "Alaves Away Loss %", "value": "52%" },
-{ "label": "H2H Mallorca Wins", "value": "2/4" },
-{ "label": "AI Accuracy", "value": "68%" }
-],
-"markets": ["Mallorca Win", "Under 3.5 Goals", "Correct Score 2-0/1-0"]
-},
-{
-"match": "Villarreal vs Ath Bilbao",
-"league": "Spain: LaLiga",
-"prediction": "Draw",
-"confidence": 63,
-"analysis": "Tactically close matchup; both teams favor structured play and often share points in tight fixtures.",
-"stats": [
-{ "label": "Villarreal Home Draw %", "value": "34%" },
-{ "label": "Bilbao Away Draw %", "value": "32%" },
-{ "label": "H2H Draws", "value": "2/5" },
-{ "label": "AI Accuracy", "value": "69%" }
-],
-"markets": ["Draw", "BTTS: Yes", "Correct Score 1-1"]
-}
-]
-}
+  "lastUpdated": "2025-09-30",
+  "predictions": {
+    "2025-09-30": [
+      {
+        "match": "Beitar Haifa Yaacov vs Maccabi Ironi Ashdod F.C.",
+        "league": "Israel Liga Bet",
+        "prediction": "Away Win",
+        "confidence": 63,
+        "analysis": "Maccabi Ironi Ashdod come in with stronger attacking form and better conversion rates. Beitar Haifa’s defensive leaks give Ashdod the equilibrium advantage. Nash balance points toward Ashdod pressing for a decisive edge.",
+        "stats": {
+          "home_last5": "1W-1D-3L",
+          "away_last5": "3W-1D-1L",
+          "avg_goals": 2.6,
+          "head_to_head": "First meeting this season"
+        },
+        "markets": {
+          "over_2.5": "Yes",
+          "btts": "Yes",
+          "1x2": "2"
+        },
+        "correct_score": "1-2"
+      },
+      {
+        "match": "Maccabi Bnei Jadeidi-Makr vs Hapoel Migdal HaEmek",
+        "league": "Israel Liga Bet",
+        "prediction": "Away Win",
+        "confidence": 61,
+        "analysis": "Migdal HaEmek show stronger midfield control and higher xG. Jadeidi struggle to hold possession. Nash model favors an away side with greater probability of sustained attacks.",
+        "stats": {
+          "home_last5": "0W-2D-3L",
+          "away_last5": "2W-2D-1L",
+          "avg_goals": 2.4
+        },
+        "markets": {
+          "over_2.5": "Yes",
+          "btts": "No",
+          "1x2": "2"
+        },
+        "correct_score": "0-2"
+      },
+      {
+        "match": "Maccabi Ahi Nazareth vs Beitar Ramat Gan",
+        "league": "Israel Liga Bet",
+        "prediction": "Home Win",
+        "confidence": 75,
+        "analysis": "Nazareth’s superior squad depth and consistent finishing rate give them high probability advantage. Beitar Ramat Gan are defensively vulnerable. Nash equilibrium favors Nazareth maintaining possession dominance.",
+        "stats": {
+          "home_last5": "4W-1L",
+          "away_last5": "1W-4L",
+          "avg_goals": 3.0
+        },
+        "markets": {
+          "over_2.5": "Yes",
+          "btts": "No",
+          "1x2": "1"
+        },
+        "correct_score": "3-0"
+      },
+      {
+        "match": "Sderot FC vs Hapoel Ironi Arraba",
+        "league": "Israel Liga Bet",
+        "prediction": "Draw",
+        "confidence": 55,
+        "analysis": "Both sides struggle with finishing and share nearly identical defensive weaknesses. Nash model predicts a balanced outcome with no clear dominance.",
+        "stats": {
+          "home_last5": "2W-0D-3L",
+          "away_last5": "1W-2D-2L",
+          "avg_goals": 2.1
+        },
+        "markets": {
+          "over_2.5": "No",
+          "btts": "Yes",
+          "1x2": "X"
+        },
+        "correct_score": "1-1"
+      },
+      {
+        "match": "MK Kfar Saba 1928 vs Maccabi Yavne",
+        "league": "Israel Liga Bet",
+        "prediction": "Draw",
+        "confidence": 57,
+        "analysis": "Both sides display defensive resilience but limited attacking conversion. Nash balance tilts toward equilibrium sharing points.",
+        "stats": {
+          "home_last5": "2W-1D-2L",
+          "away_last5": "2W-1D-2L",
+          "avg_goals": 2.5
+        },
+        "markets": {
+          "over_2.5": "No",
+          "btts": "Yes",
+          "1x2": "X"
+        },
+        "correct_score": "2-2"
+      },
+      {
+        "match": "FC Shikun HaMizrah vs FC Holon Yermiyahu",
+        "league": "Israel Liga Bet",
+        "prediction": "Away Win",
+        "confidence": 68,
+        "analysis": "Holon Yermiyahu possess stronger squad depth and efficiency in attack. Shikun HaMizrah concede heavily at home. Nash projection strongly supports away win probability.",
+        "stats": {
+          "home_last5": "0W-1D-4L",
+          "away_last5": "3W-1D-1L",
+          "avg_goals": 3.2
+        },
+        "markets": {
+          "over_2.5": "Yes",
+          "btts": "No",
+          "1x2": "2"
+        },
+        "correct_score": "0-3"
+      },
+      {
+        "match": "Hapoel Tirat HaCarmel vs Maccabi Neve Shaanan",
+        "league": "Israel Liga Bet",
+        "prediction": "Away Win",
+        "confidence": 64,
+        "analysis": "Neve Shaanan bring sharper finishing and defensive balance. Tirat HaCarmel concede on average 2+ goals per match. Nash game outcome favors away dominance.",
+        "stats": {
+          "home_last5": "1W-1D-3L",
+          "away_last5": "3W-0D-2L",
+          "avg_goals": 2.9
+        },
+        "markets": {
+          "over_2.5": "Yes",
+          "btts": "Yes",
+          "1x2": "2"
+        },
+        "correct_score": "1-2"
+      }
+    ]
+  }
 }
